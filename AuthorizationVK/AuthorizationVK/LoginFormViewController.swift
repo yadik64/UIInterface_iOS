@@ -18,6 +18,10 @@ class LoginFormViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loginTextField.becomeFirstResponder()
+        loginTextField.delegate = self
+        passwordTextField.delegate = self
+        
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
         
@@ -86,6 +90,23 @@ class LoginFormViewController: UIViewController {
     
     @objc func hideKeyboard() {
         self.scrollView?.endEditing(true)
+    }
+    
+}
+
+extension LoginFormViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case self.loginTextField:
+            self.passwordTextField.becomeFirstResponder()
+        case self.passwordTextField:
+            passwordTextField.resignFirstResponder()
+            authorizationButton()
+        default:
+            break
+        }
+        return true
     }
     
 }
