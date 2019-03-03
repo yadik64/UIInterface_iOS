@@ -9,7 +9,10 @@
 import UIKit
 
 class LoginFormViewController: UIViewController {
+    
+    let segueAuthorization = "segueAuthorization"
 
+    @IBOutlet weak var authorizationButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -42,25 +45,34 @@ class LoginFormViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    @IBAction func authorizationButton() {
+  
+    @IBAction func authorizationButton(_ sender: UIButton) {
         
-        guard let login = self.loginTextField.text else {
-            return
-        }
-        guard let password = self.passwordTextField.text else {
-            return
-        }
-        
-        if login == "admin" && password == "123456" {
-            print("Доступ разрешен!")
+        if checkUserData() {
+            performSegue(withIdentifier: segueAuthorization, sender: self)
         } else {
-            createAlert(title: "Ошибка", message: "Неверный логин или пароль", style: .alert)
+            showLoginError(title: "Ошибка", message: "Неверный логин или пароль", style: .alert)
         }
         
     }
     
+    private func checkUserData() -> Bool {
+        
+        guard let login = self.loginTextField.text else {
+            return false
+        }
+        guard let password = self.passwordTextField.text else {
+            return false
+        }
+        guard login == "admin" && password == "123456" else {
+            return false
+        }
+        
+        return true
+    }
     
-    func createAlert(title: String, message: String, style: UIAlertController.Style) {
+    
+    func showLoginError(title: String, message: String, style: UIAlertController.Style) {
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
         let actionOK = UIAlertAction(title: "ok", style: .cancel, handler: nil)
@@ -102,7 +114,7 @@ extension LoginFormViewController : UITextFieldDelegate {
             self.passwordTextField.becomeFirstResponder()
         case self.passwordTextField:
             passwordTextField.resignFirstResponder()
-            authorizationButton()
+            authorizationButton(authorizationButton)
         default:
             break
         }
