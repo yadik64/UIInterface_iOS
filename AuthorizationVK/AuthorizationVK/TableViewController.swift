@@ -10,13 +10,12 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    let cityArray = ["Саратов", "Пенза", "Москва", "Воронеж", "Ульяновск"]
     var array = Array(repeating: "Data", count: 10)
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "first TableView"
+        title = "FirstTableView"
     }
 
     // MARK: - Table view data source

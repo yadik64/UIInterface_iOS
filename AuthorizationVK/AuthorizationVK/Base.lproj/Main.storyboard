@@ -118,10 +118,10 @@
             </objects>
             <point key="canvasLocation" x="275" y="7"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Second Table View Controller-->
         <scene sceneID="AaN-r9-MCU">
             <objects>
-                <tableViewController id="3N5-8p-QhF" sceneMemberID="viewController">
+                <tableViewController id="3N5-8p-QhF" customClass="SecondTableViewController" customModule="AuthorizationVK" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mty-uG-1ZP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,10 +141,13 @@
                             <outlet property="delegate" destination="3N5-8p-QhF" id="QZV-bu-MVZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Ijh-85-5Ar"/>
-                    <connections>
-                        <segue destination="1Yw-cz-fSh" kind="show" identifier="segueToTableView" id="S37-je-8ba"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="Ijh-85-5Ar">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="YBd-vH-L23">
+                            <connections>
+                                <segue destination="1Yw-cz-fSh" kind="show" id="dvM-mh-AKW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EKG-k0-7kg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -250,6 +253,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="cbU-Qk-ysJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zCI-mo-6lQ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -262,11 +266,11 @@
             </objects>
             <point key="canvasLocation" x="1344.9275362318842" y="6.5217391304347831"/>
         </scene>
-        <!--Item-->
+        <!--FirstTableView-->
         <scene sceneID="mfY-sL-SXg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E1G-8x-emg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2Ui-ua-6dt"/>
+                    <tabBarItem key="tabBarItem" title="FirstTableView" id="2Ui-ua-6dt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9hQ-5k-G8s">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -281,11 +285,11 @@
             </objects>
             <point key="canvasLocation" x="1345" y="796"/>
         </scene>
-        <!--Item-->
+        <!--SecondTableView-->
         <scene sceneID="lgf-xO-l92">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LJC-um-zy0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="r3Y-dX-ato"/>
+                    <tabBarItem key="tabBarItem" title="SecondTableView" id="r3Y-dX-ato"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VkA-ZB-6gW">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>

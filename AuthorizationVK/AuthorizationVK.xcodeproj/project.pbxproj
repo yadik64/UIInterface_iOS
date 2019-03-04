@@ -12,6 +12,7 @@
 		101729D12228368A00331C81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 101729D02228368A00331C81 /* Assets.xcassets */; };
 		101729D42228368A00331C81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101729D22228368A00331C81 /* LaunchScreen.storyboard */; };
 		101729DC2228371400331C81 /* LoginFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101729DB2228371400331C81 /* LoginFormViewController.swift */; };
+		10497A80222D7A02000B32E2 /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10497A7F222D7A02000B32E2 /* SecondTableViewController.swift */; };
 		10C4EA80222C7DA800896C61 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C4EA7F222C7DA800896C61 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		101729D32228368A00331C81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		101729D52228368A00331C81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		101729DB2228371400331C81 /* LoginFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormViewController.swift; sourceTree = "<group>"; };
+		10497A7F222D7A02000B32E2 /* SecondTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
 		10C4EA7F222C7DA800896C61 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 				10C4EA7F222C7DA800896C61 /* TableViewController.swift */,
 				101729C92228368800331C81 /* AppDelegate.swift */,
 				101729CD2228368800331C81 /* Main.storyboard */,
+				10497A7F222D7A02000B32E2 /* SecondTableViewController.swift */,
 				101729D02228368A00331C81 /* Assets.xcassets */,
 				101729D22228368A00331C81 /* LaunchScreen.storyboard */,
 				101729D52228368A00331C81 /* Info.plist */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				101729DC2228371400331C81 /* LoginFormViewController.swift in Sources */,
+				10497A80222D7A02000B32E2 /* SecondTableViewController.swift in Sources */,
 				10C4EA80222C7DA800896C61 /* TableViewController.swift in Sources */,
 				101729CA2228368800331C81 /* AppDelegate.swift in Sources */,
 			);
