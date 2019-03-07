@@ -25,6 +25,13 @@ class UserGroupsController: UIViewController {
         
     }
     
+    @IBAction func editRowsButton(_ sender: UIBarButtonItem) {
+        
+        tableView.isEditing = !tableView.isEditing
+        
+    }
+    
+    
     @IBAction func addGroup(segue: UIStoryboardSegue) {
         
         let segueIdetifier = "addGroup"
@@ -70,22 +77,32 @@ extension UserGroupsController : UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let boof = userGroupsArray[sourceIndexPath.row]
+        userGroupsArray[sourceIndexPath.row] = userGroupsArray[destinationIndexPath.row]
+        userGroupsArray[destinationIndexPath.row] = boof
+        
+    }
     
 }
 
 extension UserGroupsController : UITableViewDelegate {
-    
+
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
+
         if editingStyle == .delete {
-            
+
             userGroupsArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            
+
         }
-        
+
     }
-    
+
 }
 
 extension NSObject {

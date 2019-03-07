@@ -183,11 +183,18 @@
                         <viewLayoutGuide key="safeArea" id="Mjp-aD-GMd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Мои Группы" id="lG7-G6-7wv">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Uvu-lx-A3l">
-                            <connections>
-                                <segue destination="iUK-nw-Oa1" kind="show" id="qjy-D3-yrG"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="Uvu-lx-A3l">
+                                <connections>
+                                    <segue destination="iUK-nw-Oa1" kind="show" id="qjy-D3-yrG"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="edit" id="Wkc-G1-h0L">
+                                <connections>
+                                    <action selector="editRowsButton:" destination="gef-hY-wly" id="5TY-IL-fHk"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ssg-me-ymB" id="6uT-4A-fcy"/>
