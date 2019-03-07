@@ -11,48 +11,47 @@ import UIKit
 class UserGroupsController: UIViewController {
     
     var userGroupsArray = [
-        (nameGroup: "iOS Developers", nameIcon: "appleIcon"),
-        (nameGroup: "Free Rider", nameIcon: "freeRiderIcon"),
-        (nameGroup: "Saratov News", nameIcon: "saratovNewsIcon"),
-        (nameGroup: "Tattoo", nameIcon: "tattooIcon")
+        Group(nameGroup: "iOS Developers", nameIcon: "appleIcon"),
+        Group(nameGroup: "Free Rider", nameIcon: "freeRiderIcon"),
+        Group(nameGroup: "Saratov News", nameIcon: "saratovNewsIcon"),
+        Group(nameGroup: "Tattoo", nameIcon: "tattooIcon")
     ]
+    
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
     }
     
     @IBAction func editRowsButton(_ sender: UIBarButtonItem) {
-        
         tableView.isEditing = !tableView.isEditing
-        
     }
-    
     
     @IBAction func addGroup(segue: UIStoryboardSegue) {
         
         let segueIdetifier = "addGroup"
-        
         guard segue.identifier == segueIdetifier else {
             return
         }
         
         let allGroupsController = segue.source as! AllGroupsController
-        
         guard let indexPath = allGroupsController.tableView.indexPathForSelectedRow else {
             return
         }
         
-        let city = allGroupsController.allGroups[indexPath.row]
-        
-        guard !userGroupsArray.contains(where: {$0 == city}) else {
-            return
+        let group: Group
+        if allGroupsController.isFiltering() {
+            group = allGroupsController.searchResultArray[indexPath.row]
+        } else {
+            group = allGroupsController.allGroupsArray[indexPath.row]
         }
         
-        userGroupsArray.append(city)
+        guard !userGroupsArray.contains(where: {$0 == group}) else {
+            return
+        }
+        userGroupsArray.append(group)
         tableView.reloadData()
         
     }
@@ -66,7 +65,6 @@ extension UserGroupsController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let identifier = UserGroupsCell.className()
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! UserGroupsCell
         let icon = UIImage(named: userGroupsArray[indexPath.row].nameIcon)
@@ -85,32 +83,22 @@ extension UserGroupsController : UITableViewDataSource {
         let boof = userGroupsArray[sourceIndexPath.row]
         userGroupsArray[sourceIndexPath.row] = userGroupsArray[destinationIndexPath.row]
         userGroupsArray[destinationIndexPath.row] = boof
-        
     }
-    
 }
 
 extension UserGroupsController : UITableViewDelegate {
-
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 
         if editingStyle == .delete {
 
             userGroupsArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-
         }
-
     }
-
 }
 
 extension NSObject {
-    
     static func className() -> String {
-        
         return String(describing: self)
-        
     }
-    
 }

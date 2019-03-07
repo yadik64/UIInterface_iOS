@@ -15,6 +15,7 @@
 		101729D12228368A00331C81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 101729D02228368A00331C81 /* Assets.xcassets */; };
 		101729D42228368A00331C81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101729D22228368A00331C81 /* LaunchScreen.storyboard */; };
 		101729DC2228371400331C81 /* LoginFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101729DB2228371400331C81 /* LoginFormViewController.swift */; };
+		10AF465A22315331004FD977 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AF465922315331004FD977 /* Group.swift */; };
 		10C5204C223103D800B6F67B /* AllGroupsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5204B223103D800B6F67B /* AllGroupsCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		101729D32228368A00331C81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		101729D52228368A00331C81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		101729DB2228371400331C81 /* LoginFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormViewController.swift; sourceTree = "<group>"; };
+		10AF465922315331004FD977 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		10C5204B223103D800B6F67B /* AllGroupsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,7 @@
 				101729D02228368A00331C81 /* Assets.xcassets */,
 				101729D22228368A00331C81 /* LaunchScreen.storyboard */,
 				101729D52228368A00331C81 /* Info.plist */,
+				10AF465922315331004FD977 /* Group.swift */,
 			);
 			path = AuthorizationVK;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10AF465A22315331004FD977 /* Group.swift in Sources */,
 				101729DC2228371400331C81 /* LoginFormViewController.swift in Sources */,
 				101729CA2228368800331C81 /* AppDelegate.swift in Sources */,
 				1006189722310DF50094A08C /* UserGroupsCell.swift in Sources */,

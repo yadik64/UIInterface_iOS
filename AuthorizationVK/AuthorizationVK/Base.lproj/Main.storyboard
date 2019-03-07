@@ -217,13 +217,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="yfv-V5-wzA">
-                                <rect key="frame" x="0.0" y="64" width="414" height="56"/>
-                                <color key="barTintColor" red="0.2901960784" green="0.52156862749999999" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="search"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h1U-xm-RiT">
-                                <rect key="frame" x="0.0" y="120" width="414" height="567"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllGroupsCell" rowHeight="70" id="O7a-TA-JJe" customClass="AllGroupsCell" customModule="AuthorizationVK" customModuleProvider="target">
@@ -273,12 +268,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="h1U-xm-RiT" firstAttribute="leading" secondItem="7c9-Yq-Jmf" secondAttribute="leading" id="6X5-sL-pKw"/>
+                            <constraint firstItem="h1U-xm-RiT" firstAttribute="top" secondItem="7c9-Yq-Jmf" secondAttribute="top" id="6gY-XG-Yn3"/>
+                            <constraint firstItem="h1U-xm-RiT" firstAttribute="trailing" secondItem="7c9-Yq-Jmf" secondAttribute="trailing" id="8v8-IT-PcU"/>
                             <constraint firstItem="h1U-xm-RiT" firstAttribute="bottom" secondItem="7c9-Yq-Jmf" secondAttribute="bottom" id="9RX-Is-JgB"/>
-                            <constraint firstItem="yfv-V5-wzA" firstAttribute="leading" secondItem="7c9-Yq-Jmf" secondAttribute="leading" id="JxB-Um-bKf"/>
-                            <constraint firstItem="yfv-V5-wzA" firstAttribute="top" secondItem="7c9-Yq-Jmf" secondAttribute="top" id="SkQ-81-dLc"/>
                             <constraint firstItem="h1U-xm-RiT" firstAttribute="trailing" secondItem="7c9-Yq-Jmf" secondAttribute="trailing" id="gKw-vf-Kql"/>
-                            <constraint firstItem="h1U-xm-RiT" firstAttribute="top" secondItem="yfv-V5-wzA" secondAttribute="bottom" id="n7b-E1-W1I"/>
-                            <constraint firstItem="yfv-V5-wzA" firstAttribute="trailing" secondItem="7c9-Yq-Jmf" secondAttribute="trailing" id="w52-sA-LFl"/>
+                            <constraint firstItem="h1U-xm-RiT" firstAttribute="bottom" secondItem="7c9-Yq-Jmf" secondAttribute="bottom" id="uOO-EE-lxm"/>
+                            <constraint firstItem="h1U-xm-RiT" firstAttribute="leading" secondItem="7c9-Yq-Jmf" secondAttribute="leading" id="yQ7-vY-bGF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7c9-Yq-Jmf"/>
                     </view>
