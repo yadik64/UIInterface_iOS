@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Group {
+struct Group : Hashable {
     
     var nameGroup : String
     var nameIcon : String

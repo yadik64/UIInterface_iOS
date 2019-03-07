@@ -10,13 +10,14 @@ import UIKit
 
 class UserGroupsController: UIViewController {
     
-    var userGroupsArray = [
-        Group(nameGroup: "iOS Developers", nameIcon: "appleIcon"),
-        Group(nameGroup: "Free Rider", nameIcon: "freeRiderIcon"),
-        Group(nameGroup: "Saratov News", nameIcon: "saratovNewsIcon"),
-        Group(nameGroup: "Tattoo", nameIcon: "tattooIcon")
-    ]
+//    var userGroupsArray = [
+//        Group(nameGroup: "iOS Developers", nameIcon: "appleIcon"),
+//        Group(nameGroup: "Free Rider", nameIcon: "freeRiderIcon"),
+//        Group(nameGroup: "Saratov News", nameIcon: "saratovNewsIcon"),
+//        Group(nameGroup: "Tattoo", nameIcon: "tattooIcon")
+//    ]
     
+    var userGroupsArray = [Group]()
     
     @IBOutlet weak var tableView: UITableView!
     
