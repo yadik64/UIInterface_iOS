@@ -10,7 +10,7 @@ import UIKit
 
 class AllGroupsController: UIViewController {
     
-    let allGroupsArray = [
+    var allGroupsArray = [
         Group(nameGroup: "iOS Developers", nameIcon: "appleIcon"),
         Group(nameGroup: "Free Rider", nameIcon: "freeRiderIcon"),
         Group(nameGroup: "Saratov News", nameIcon: "saratovNewsIcon"),
@@ -28,12 +28,13 @@ class AllGroupsController: UIViewController {
         Group(nameGroup: "Group Ten", nameIcon: "anotherGroupIcon")
     ]
     var searchResultArray = [Group]()
+    let searchController = UISearchController(searchResultsController: nil)
     
     @IBOutlet weak var tableView: UITableView!
-    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -71,6 +72,7 @@ extension AllGroupsController : UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let identifier = AllGroupsCell.className()
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! AllGroupsCell
         
