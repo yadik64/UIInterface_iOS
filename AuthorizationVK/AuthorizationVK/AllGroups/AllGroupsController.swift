@@ -10,30 +10,52 @@ import UIKit
 
 class AllGroupsController: UIViewController {
     
-    let allGroups = [
-        (nameGroup: "iOS Developers", nameIcon: "appleIcon"),
-        (nameGroup: "Free Rider", nameIcon: "freeRiderIcon"),
-        (nameGroup: "Saratov News", nameIcon: "saratovNewsIcon"),
-        (nameGroup: "Tattoo", nameIcon: "tattooIcon"),
-        (nameGroup: "Group One", nameIcon: "anotherGroupIcon"),
-        (nameGroup: "Group Two", nameIcon: "anotherGroupIcon"),
-        (nameGroup: "Group Three", nameIcon: "anotherGroupIcon"),
-        (nameGroup: "Group Four", nameIcon: "anotherGroupIcon"),
-        (nameGroup: "Group Five", nameIcon: "anotherGroupIcon"),
-        (nameGroup: "Group News", nameIcon: "anotherGroupIcon"),
-        (nameGroup: "Group Six", nameIcon: "anotherGroupIcon"),
-        (nameGroup: "Group Seven", nameIcon: "anotherGroupIcon"),
-        (nameGroup: "Group Eight", nameIcon: "anotherGroupIcon"),
-        (nameGroup: "Group Nine", nameIcon: "anotherGroupIcon"),
-        (nameGroup: "Group Ten", nameIcon: "anotherGroupIcon")
+    let allGroupsArray = [
+        Group(nameGroup: "iOS Developers", nameIcon: "appleIcon"),
+        Group(nameGroup: "Free Rider", nameIcon: "freeRiderIcon"),
+        Group(nameGroup: "Saratov News", nameIcon: "saratovNewsIcon"),
+        Group(nameGroup: "Tattoo", nameIcon: "tattooIcon"),
+        Group(nameGroup: "Group One", nameIcon: "anotherGroupIcon"),
+        Group(nameGroup: "Group Two", nameIcon: "anotherGroupIcon"),
+        Group(nameGroup: "Group Three", nameIcon: "anotherGroupIcon"),
+        Group(nameGroup: "Group Four", nameIcon: "anotherGroupIcon"),
+        Group(nameGroup: "Group Five", nameIcon: "anotherGroupIcon"),
+        Group(nameGroup: "Group News", nameIcon: "anotherGroupIcon"),
+        Group(nameGroup: "Group Six", nameIcon: "anotherGroupIcon"),
+        Group(nameGroup: "Group Seven", nameIcon: "anotherGroupIcon"),
+        Group(nameGroup: "Group Eight", nameIcon: "anotherGroupIcon"),
+        Group(nameGroup: "Group Nine", nameIcon: "anotherGroupIcon"),
+        Group(nameGroup: "Group Ten", nameIcon: "anotherGroupIcon")
     ]
+    var searchResultArray = [Group]()
     
     @IBOutlet weak var tableView: UITableView!
+    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Поиск групп"
+        tableView.tableHeaderView = searchController.searchBar
 
-        // Do any additional setup after loading the view.
+    }
+    
+    func searchBarIsEmpty() -> Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        searchResultArray = allGroupsArray.filter({( group : Group) -> Bool in
+            return group.nameGroup.lowercased().contains(searchText.lowercased())
+        })
+
+        tableView.reloadData()
+    }
+    
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
     }
     
 }
@@ -41,22 +63,35 @@ class AllGroupsController: UIViewController {
 extension AllGroupsController : UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allGroups.count
+        if isFiltering() {
+            return searchResultArray.count
+        }
+        
+        return allGroupsArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
         let identifier = AllGroupsCell.className()
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! AllGroupsCell
+        
+        let group: Group
+        if isFiltering() {
+            group = searchResultArray[indexPath.row]
+        } else {
+            group = allGroupsArray[indexPath.row]
+        }
 
-        let icon = UIImage(named: allGroups[indexPath.row].nameIcon)
-        let nameGroup = allGroups[indexPath.row].nameGroup
-
+        let icon = UIImage(named: group.nameIcon)
+        let nameGroup = group.nameGroup
         cell.nameIconImage.image = icon
         cell.nameGroupLabel.text = nameGroup
 
         return cell
-
     }
+}
 
+extension AllGroupsController : UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
 }
