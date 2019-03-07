@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1006189722310DF50094A08C /* UserGroupsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1006189622310DF50094A08C /* UserGroupsCell.swift */; };
+		1010883B223057E7006FEDE2 /* UserGroupsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1010883A223057E7006FEDE2 /* UserGroupsController.swift */; };
+		10108848223073CB006FEDE2 /* AllGroupsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10108847223073CB006FEDE2 /* AllGroupsController.swift */; };
 		101729CA2228368800331C81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101729C92228368800331C81 /* AppDelegate.swift */; };
 		101729CF2228368800331C81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101729CD2228368800331C81 /* Main.storyboard */; };
 		101729D12228368A00331C81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 101729D02228368A00331C81 /* Assets.xcassets */; };
 		101729D42228368A00331C81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101729D22228368A00331C81 /* LaunchScreen.storyboard */; };
 		101729DC2228371400331C81 /* LoginFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101729DB2228371400331C81 /* LoginFormViewController.swift */; };
-		10497A80222D7A02000B32E2 /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10497A7F222D7A02000B32E2 /* SecondTableViewController.swift */; };
-		10C4EA80222C7DA800896C61 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C4EA7F222C7DA800896C61 /* TableViewController.swift */; };
+		10C5204C223103D800B6F67B /* AllGroupsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5204B223103D800B6F67B /* AllGroupsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1006189622310DF50094A08C /* UserGroupsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupsCell.swift; sourceTree = "<group>"; };
+		1010883A223057E7006FEDE2 /* UserGroupsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupsController.swift; sourceTree = "<group>"; };
+		10108847223073CB006FEDE2 /* AllGroupsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsController.swift; sourceTree = "<group>"; };
 		101729C62228368800331C81 /* AuthorizationVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthorizationVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		101729C92228368800331C81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		101729CE2228368800331C81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -24,8 +29,7 @@
 		101729D32228368A00331C81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		101729D52228368A00331C81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		101729DB2228371400331C81 /* LoginFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormViewController.swift; sourceTree = "<group>"; };
-		10497A7F222D7A02000B32E2 /* SecondTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
-		10C4EA7F222C7DA800896C61 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		10C5204B223103D800B6F67B /* AllGroupsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1010882E22304513006FEDE2 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		10108839223057B4006FEDE2 /* UserGroups */ = {
+			isa = PBXGroup;
+			children = (
+				1010883A223057E7006FEDE2 /* UserGroupsController.swift */,
+				1006189622310DF50094A08C /* UserGroupsCell.swift */,
+			);
+			name = UserGroups;
+			path = MyGroups;
+			sourceTree = "<group>";
+		};
+		1010884022307322006FEDE2 /* AllGroups */ = {
+			isa = PBXGroup;
+			children = (
+				10108847223073CB006FEDE2 /* AllGroupsController.swift */,
+				10C5204B223103D800B6F67B /* AllGroupsCell.swift */,
+			);
+			path = AllGroups;
+			sourceTree = "<group>";
+		};
 		101729BD2228368800331C81 = {
 			isa = PBXGroup;
 			children = (
@@ -58,11 +88,12 @@
 		101729C82228368800331C81 /* AuthorizationVK */ = {
 			isa = PBXGroup;
 			children = (
+				1010884022307322006FEDE2 /* AllGroups */,
+				10108839223057B4006FEDE2 /* UserGroups */,
+				1010882E22304513006FEDE2 /* Friends */,
 				101729DB2228371400331C81 /* LoginFormViewController.swift */,
-				10C4EA7F222C7DA800896C61 /* TableViewController.swift */,
 				101729C92228368800331C81 /* AppDelegate.swift */,
 				101729CD2228368800331C81 /* Main.storyboard */,
-				10497A7F222D7A02000B32E2 /* SecondTableViewController.swift */,
 				101729D02228368A00331C81 /* Assets.xcassets */,
 				101729D22228368A00331C81 /* LaunchScreen.storyboard */,
 				101729D52228368A00331C81 /* Info.plist */,
@@ -142,9 +173,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				101729DC2228371400331C81 /* LoginFormViewController.swift in Sources */,
-				10497A80222D7A02000B32E2 /* SecondTableViewController.swift in Sources */,
-				10C4EA80222C7DA800896C61 /* TableViewController.swift in Sources */,
 				101729CA2228368800331C81 /* AppDelegate.swift in Sources */,
+				1006189722310DF50094A08C /* UserGroupsCell.swift in Sources */,
+				10108848223073CB006FEDE2 /* AllGroupsController.swift in Sources */,
+				1010883B223057E7006FEDE2 /* UserGroupsController.swift in Sources */,
+				10C5204C223103D800B6F67B /* AllGroupsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
