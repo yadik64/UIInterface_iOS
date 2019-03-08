@@ -41,6 +41,8 @@ class AllGroupsController: UIViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Поиск групп"
         tableView.tableHeaderView = searchController.searchBar
+        
+        title = "Группы"
 
     }
     

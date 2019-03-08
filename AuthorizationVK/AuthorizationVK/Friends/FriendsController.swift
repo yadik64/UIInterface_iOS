@@ -20,6 +20,8 @@ class FriendsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Мои Друзья"
 
     }
     
