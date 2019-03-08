@@ -32,9 +32,7 @@ extension FriendFotoController : UICollectionViewDataSource, UICollectionViewDel
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! FriendFotoCell
         guard friendData != nil else {
             
-            //Переделать вставить другое фото!!!
-            
-            cell.nameFotoImage.image = UIImage(named: "fotohetvield")
+            cell.nameFotoImage.image = UIImage(named: "nophoto")
             return cell
         }
         

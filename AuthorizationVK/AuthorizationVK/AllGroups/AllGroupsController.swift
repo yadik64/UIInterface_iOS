@@ -15,18 +15,19 @@ class AllGroupsController: UIViewController {
         Group(nameGroup: "Free Rider", nameIcon: "freeRiderIcon"),
         Group(nameGroup: "Saratov News", nameIcon: "saratovNewsIcon"),
         Group(nameGroup: "Tattoo", nameIcon: "tattooIcon"),
-        Group(nameGroup: "Group One", nameIcon: "anotherGroupIcon"),
-        Group(nameGroup: "Group Two", nameIcon: "anotherGroupIcon"),
-        Group(nameGroup: "Group Three", nameIcon: "anotherGroupIcon"),
-        Group(nameGroup: "Group Four", nameIcon: "anotherGroupIcon"),
-        Group(nameGroup: "Group Five", nameIcon: "anotherGroupIcon"),
-        Group(nameGroup: "Group News", nameIcon: "anotherGroupIcon"),
-        Group(nameGroup: "Group Six", nameIcon: "anotherGroupIcon"),
-        Group(nameGroup: "Group Seven", nameIcon: "anotherGroupIcon"),
-        Group(nameGroup: "Group Eight", nameIcon: "anotherGroupIcon"),
-        Group(nameGroup: "Group Nine", nameIcon: "anotherGroupIcon"),
-        Group(nameGroup: "Group Ten", nameIcon: "anotherGroupIcon")
+        Group(nameGroup: "GeekBrains", nameIcon: "anotherGroupIcon"),
+        Group(nameGroup: "Байкерский журнал СВОБОДНАЯ ДОРОГА", nameIcon: "anotherGroupIcon"),
+        Group(nameGroup: "Запчасти Geely Запчасти Джили", nameIcon: "anotherGroupIcon"),
+        Group(nameGroup: "ФИЛЬМЫ УЖАСОВ", nameIcon: "anotherGroupIcon"),
+        Group(nameGroup: "Мой Алабай.", nameIcon: "anotherGroupIcon"),
+        Group(nameGroup: "Чоппер или мото без пластмассы", nameIcon: "anotherGroupIcon"),
+        Group(nameGroup: "Route 66", nameIcon: "anotherGroupIcon"),
+        Group(nameGroup: "Читатели Чака Паланика", nameIcon: "anotherGroupIcon"),
+        Group(nameGroup: "Мир Высоких Технологий", nameIcon: "anotherGroupIcon"),
+        Group(nameGroup: "Beard custom studio", nameIcon: "anotherGroupIcon"),
+        Group(nameGroup: "Falcon Tuning", nameIcon: "anotherGroupIcon")
     ]
+    var dispayedGroupsArray = [Group]()
     var searchResultArray = [Group]()
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -48,7 +49,7 @@ class AllGroupsController: UIViewController {
     }
     
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-        searchResultArray = allGroupsArray.filter({( group : Group) -> Bool in
+        searchResultArray = dispayedGroupsArray.filter({( group : Group) -> Bool in
             return group.nameGroup.lowercased().contains(searchText.lowercased())
         })
 
@@ -68,7 +69,7 @@ extension AllGroupsController : UITableViewDataSource {
             return searchResultArray.count
         }
         
-        return allGroupsArray.count
+        return dispayedGroupsArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -80,7 +81,7 @@ extension AllGroupsController : UITableViewDataSource {
         if isFiltering() {
             group = searchResultArray[indexPath.row]
         } else {
-            group = allGroupsArray[indexPath.row]
+            group = dispayedGroupsArray[indexPath.row]
         }
 
         let icon = UIImage(named: group.nameIcon)

@@ -149,8 +149,8 @@
                                                         <constraint firstAttribute="width" constant="70" id="C71-Az-fj9"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free Rider" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCl-3F-gMs">
-                                                    <rect key="frame" x="85" y="14" width="79" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free Rider" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCl-3F-gMs">
+                                                    <rect key="frame" x="85" y="14.000000000000002" width="78.333333333333314" height="20.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -191,7 +191,7 @@
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="Uvu-lx-A3l">
                                 <connections>
-                                    <segue destination="iUK-nw-Oa1" kind="show" id="qjy-D3-yrG"/>
+                                    <segue destination="iUK-nw-Oa1" kind="show" identifier="SegueToAllGroups" id="qjy-D3-yrG"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="edit" id="Wkc-G1-h0L">
@@ -240,8 +240,8 @@
                                                         <constraint firstAttribute="width" constant="70" id="JxG-r9-vXI"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Developers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0K-L4-dIr">
-                                                    <rect key="frame" x="85" y="14.000000000000002" width="118" height="20.333333333333336"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Developers" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0K-L4-dIr">
+                                                    <rect key="frame" x="85" y="14.000000000000002" width="117.66666666666669" height="20.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
