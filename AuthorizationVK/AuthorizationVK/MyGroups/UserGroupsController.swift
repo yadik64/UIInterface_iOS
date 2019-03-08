@@ -10,14 +10,14 @@ import UIKit
 
 class UserGroupsController: UIViewController {
     
-//    var userGroupsArray = [
-//        Group(nameGroup: "iOS Developers", nameIcon: "appleIcon"),
-//        Group(nameGroup: "Free Rider", nameIcon: "freeRiderIcon"),
-//        Group(nameGroup: "Saratov News", nameIcon: "saratovNewsIcon"),
-//        Group(nameGroup: "Tattoo", nameIcon: "tattooIcon")
-//    ]
+    var userGroupsArray = [
+        Group(nameGroup: "iOS Developers", nameIcon: "appleIcon"),
+        Group(nameGroup: "Free Rider", nameIcon: "freeRiderIcon"),
+        Group(nameGroup: "Saratov News", nameIcon: "saratovNewsIcon"),
+        Group(nameGroup: "Tattoo", nameIcon: "tattooIcon")
+    ]
     
-    var userGroupsArray = [Group]()
+//    var userGroupsArray = [Group]()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -46,7 +46,7 @@ class UserGroupsController: UIViewController {
         if allGroupsController.isFiltering() {
             group = allGroupsController.searchResultArray[indexPath.row]
         } else {
-            group = allGroupsController.allGroupsArray[indexPath.row]
+            group = allGroupsController.dispayedGroupsArray[indexPath.row]
         }
         
         guard !userGroupsArray.contains(where: {$0 == group}) else {
@@ -54,6 +54,17 @@ class UserGroupsController: UIViewController {
         }
         userGroupsArray.append(group)
         tableView.reloadData()
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "SegueToAllGroups" else {
+            return
+        }
+        let allGroupsController = segue.destination as! AllGroupsController
+        
+        allGroupsController.dispayedGroupsArray = Array(Set(allGroupsController.allGroupsArray).subtracting(userGroupsArray))
+        
         
     }
 
