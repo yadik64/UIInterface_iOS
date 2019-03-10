@@ -142,7 +142,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="69.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="freeRiderIcon" translatesAutoresizingMaskIntoConstraints="NO" id="i4G-lk-Zst">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appleIcon" translatesAutoresizingMaskIntoConstraints="NO" id="i4G-lk-Zst">
                                                     <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="70" id="AeK-v4-loe"/>
@@ -502,7 +502,6 @@
     <resources>
         <image name="appleIcon" width="5040" height="5040"/>
         <image name="fotohetvield" width="650" height="520"/>
-        <image name="freeRiderIcon" width="28" height="28"/>
         <image name="friend" width="30" height="31"/>
         <image name="groups" width="30" height="30"/>
         <image name="hetvield" width="70" height="70"/>
