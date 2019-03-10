@@ -15,6 +15,7 @@
 		101729D12228368A00331C81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 101729D02228368A00331C81 /* Assets.xcassets */; };
 		101729D42228368A00331C81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101729D22228368A00331C81 /* LaunchScreen.storyboard */; };
 		101729DC2228371400331C81 /* LoginFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101729DB2228371400331C81 /* LoginFormViewController.swift */; };
+		1033A70322352A99004490FD /* IconAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1033A70222352A99004490FD /* IconAvatar.swift */; };
 		10AF465A22315331004FD977 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AF465922315331004FD977 /* Group.swift */; };
 		10AF465C22318841004FD977 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AF465B22318841004FD977 /* Friends.swift */; };
 		10AF465E22318BEA004FD977 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AF465D22318BEA004FD977 /* FriendsCell.swift */; };
@@ -35,6 +36,7 @@
 		101729D32228368A00331C81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		101729D52228368A00331C81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		101729DB2228371400331C81 /* LoginFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormViewController.swift; sourceTree = "<group>"; };
+		1033A70222352A99004490FD /* IconAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconAvatar.swift; sourceTree = "<group>"; };
 		10AF465922315331004FD977 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		10AF465B22318841004FD977 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 		10AF465D22318BEA004FD977 /* FriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				10108839223057B4006FEDE2 /* UserGroups */,
 				1010882E22304513006FEDE2 /* Friends */,
 				101729DB2228371400331C81 /* LoginFormViewController.swift */,
+				1033A70222352A99004490FD /* IconAvatar.swift */,
 				101729C92228368800331C81 /* AppDelegate.swift */,
 				101729CD2228368800331C81 /* Main.storyboard */,
 				101729D02228368A00331C81 /* Assets.xcassets */,
@@ -206,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1033A70322352A99004490FD /* IconAvatar.swift in Sources */,
 				10AF465A22315331004FD977 /* Group.swift in Sources */,
 				10AF46642231A59A004FD977 /* FriendFotoController.swift in Sources */,
 				10AF466022318C0D004FD977 /* FriendsController.swift in Sources */,

@@ -11,12 +11,10 @@ import Foundation
 struct Friends {
     
     var nameFriend: String
-    var iconFriend: String
     var fotoFriend: String
     
-    init(name: String, icon: String) {
+    init(name: String, foto: String) {
         self.nameFriend = name
-        self.iconFriend = icon
-        self.fotoFriend = "foto" + icon
+        self.fotoFriend = foto
     }
 }

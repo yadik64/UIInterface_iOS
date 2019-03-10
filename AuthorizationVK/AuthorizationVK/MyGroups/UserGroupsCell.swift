@@ -10,7 +10,7 @@ import UIKit
 
 class UserGroupsCell: UITableViewCell {
 
-    @IBOutlet weak var nameIconImage: UIImageView!
+    @IBOutlet weak var nameIconImage: IconAvatar!
     @IBOutlet weak var nameGroupLabel: UILabel!
     
     override func awakeFromNib() {

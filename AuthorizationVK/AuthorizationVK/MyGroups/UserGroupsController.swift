@@ -79,9 +79,9 @@ extension UserGroupsController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = UserGroupsCell.className()
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! UserGroupsCell
-        let icon = UIImage(named: userGroupsArray[indexPath.row].nameIcon)
+        let iconName = userGroupsArray[indexPath.row].nameIcon
         let nameGroup = userGroupsArray[indexPath.row].nameGroup
-        cell.nameIconImage.image = icon
+        cell.nameIconImage.createIconAvatar(image: iconName)
         cell.nameGroupLabel.text = nameGroup
         
         return cell

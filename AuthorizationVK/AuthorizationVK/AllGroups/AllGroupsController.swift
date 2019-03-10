@@ -15,17 +15,17 @@ class AllGroupsController: UIViewController {
         Group(nameGroup: "Free Rider", nameIcon: "freeRiderIcon"),
         Group(nameGroup: "Saratov News", nameIcon: "saratovNewsIcon"),
         Group(nameGroup: "Tattoo", nameIcon: "tattooIcon"),
-        Group(nameGroup: "GeekBrains", nameIcon: "anotherGroupIcon"),
-        Group(nameGroup: "Байкерский журнал СВОБОДНАЯ ДОРОГА", nameIcon: "anotherGroupIcon"),
-        Group(nameGroup: "Запчасти Geely Запчасти Джили", nameIcon: "anotherGroupIcon"),
-        Group(nameGroup: "ФИЛЬМЫ УЖАСОВ", nameIcon: "anotherGroupIcon"),
-        Group(nameGroup: "Мой Алабай.", nameIcon: "anotherGroupIcon"),
-        Group(nameGroup: "Чоппер или мото без пластмассы", nameIcon: "anotherGroupIcon"),
-        Group(nameGroup: "Route 66", nameIcon: "anotherGroupIcon"),
-        Group(nameGroup: "Читатели Чака Паланика", nameIcon: "anotherGroupIcon"),
-        Group(nameGroup: "Мир Высоких Технологий", nameIcon: "anotherGroupIcon"),
-        Group(nameGroup: "Beard custom studio", nameIcon: "anotherGroupIcon"),
-        Group(nameGroup: "Falcon Tuning", nameIcon: "anotherGroupIcon")
+        Group(nameGroup: "GeekBrains", nameIcon: "geekIcon"),
+        Group(nameGroup: "Байкерский журнал СВОБОДНАЯ ДОРОГА", nameIcon: "freeRoadIcon"),
+        Group(nameGroup: "Запчасти Geely Запчасти Джили", nameIcon: "geelyIcon"),
+        Group(nameGroup: "ФИЛЬМЫ УЖАСОВ", nameIcon: "horrorIcon"),
+        Group(nameGroup: "Мой Алабай.", nameIcon: "alabayIcon"),
+        Group(nameGroup: "Чоппер или мото без пластмассы", nameIcon: "chopperIcon"),
+        Group(nameGroup: "Route 66", nameIcon: "route66Icon"),
+        Group(nameGroup: "Читатели Чака Паланика", nameIcon: "palahniukIcon"),
+        Group(nameGroup: "Мир Высоких Технологий", nameIcon: "peaceITIcon"),
+        Group(nameGroup: "Beard custom studio", nameIcon: "beardIcon"),
+        Group(nameGroup: "Falcon Tuning", nameIcon: "falconIcon")
     ]
     var dispayedGroupsArray = [Group]()
     var searchResultArray = [Group]()
@@ -86,9 +86,9 @@ extension AllGroupsController : UITableViewDataSource {
             group = dispayedGroupsArray[indexPath.row]
         }
 
-        let icon = UIImage(named: group.nameIcon)
+        let iconName = group.nameIcon
         let nameGroup = group.nameGroup
-        cell.nameIconImage.image = icon
+        cell.nameIconImage.createIconAvatar(image: iconName)
         cell.nameGroupLabel.text = nameGroup
 
         return cell

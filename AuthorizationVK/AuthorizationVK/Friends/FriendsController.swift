@@ -9,9 +9,9 @@
 import UIKit
 
 var userFriendsArray = [
-    Friends(name: "Джеймс Алан Хэтфилд", icon: "hetvield"),
-    Friends(name: "Стивен Пол (Стив) Джобс", icon: "jobs"),
-    Friends(name: "Ральф «Сонни» Баргер", icon: "barger")
+    Friends(name: "Джеймс Алан Хэтфилд", foto: "fotohetvield"),
+    Friends(name: "Стивен Пол (Стив) Джобс", foto: "fotojobs"),
+    Friends(name: "Ральф «Сонни» Баргер", foto: "fotobarger")
 ]
 
 class FriendsController: UIViewController {
@@ -54,10 +54,10 @@ extension FriendsController : UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! FriendsCell
         
         let name = userFriendsArray[indexPath.row].nameFriend
-        let icon = UIImage(named: userFriendsArray[indexPath.row].iconFriend)
+        let fotoName = userFriendsArray[indexPath.row].fotoFriend
         
         cell.nameFriendLabel.text = name
-        cell.nameIconImage.image = icon
+        cell.nameIconImage.createIconAvatar(image: fotoName)
         
         return cell
     }
