@@ -10,13 +10,14 @@ import UIKit
 
 class FriendsCell: UITableViewCell {
 
-    @IBOutlet weak var nameIconImage: UIImageView!
+//    @IBOutlet weak var nameIconImage: UIImageView!
     @IBOutlet weak var nameFriendLabel: UILabel!
+    @IBOutlet weak var nameIconImage: IconAvatar!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
