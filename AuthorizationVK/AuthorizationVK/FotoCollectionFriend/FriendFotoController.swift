@@ -36,9 +36,11 @@ extension FriendFotoController : UICollectionViewDataSource, UICollectionViewDel
             return cell
         }
         
-        cell.nameFotoImage.image = UIImage(named: (friendData?.fotoFriend)!)
+        let foto = UIImage(named: (friendData?.fotoFriend)!) 
+        cell.nameFotoImage.image = foto
         
         return cell
     }
     
 }
+

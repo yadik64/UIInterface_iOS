@@ -13,6 +13,7 @@ struct Friends {
     var nameFriend: String
     var fotoFriend: String
     
+    
     init(name: String, foto: String) {
         self.nameFriend = name
         self.fotoFriend = foto
