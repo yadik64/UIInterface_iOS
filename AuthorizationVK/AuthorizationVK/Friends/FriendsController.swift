@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 var userFriendsArray = [
     Friends(name: "Джеймс Алан Хэтфилд", foto: "fotohetvield"),
     Friends(name: "Стивен Пол (Стив) Джобс", foto: "fotojobs"),
@@ -61,4 +62,5 @@ extension FriendsController : UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+
 }

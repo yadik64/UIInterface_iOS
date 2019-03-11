@@ -404,19 +404,55 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fotohetvield" translatesAutoresizingMaskIntoConstraints="NO" id="BAz-We-Wqv">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fotojobs" translatesAutoresizingMaskIntoConstraints="NO" id="BAz-We-Wqv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="390"/>
                                                 </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="EkN-yI-67t">
+                                                    <rect key="frame" x="184.33333333333334" y="394" width="45.666666666666657" height="15"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ql7-BC-eDF" customClass="LikeButton" customModule="AuthorizationVK" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="15" id="dk6-dy-e8O"/>
+                                                                <constraint firstAttribute="width" constant="15" id="hbx-X9-skH"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <action selector="pressLikeButton:" destination="U1f-JH-m2N" eventType="touchUpInside" id="cpa-Df-TKP"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="777" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVd-vJ-nOd">
+                                                            <rect key="frame" x="17" y="0.0" width="28.666666666666671" height="15"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Ql7-BC-eDF" firstAttribute="top" secondItem="EkN-yI-67t" secondAttribute="top" id="KRD-ge-tDv"/>
+                                                        <constraint firstItem="uVd-vJ-nOd" firstAttribute="leading" secondItem="Ql7-BC-eDF" secondAttribute="trailing" constant="2" id="TsH-cB-WtP"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Ql7-BC-eDF" secondAttribute="bottom" id="XpV-0u-lEG"/>
+                                                        <constraint firstItem="Ql7-BC-eDF" firstAttribute="leading" secondItem="EkN-yI-67t" secondAttribute="leading" id="umx-Ou-x3e"/>
+                                                    </constraints>
+                                                </stackView>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstItem="BAz-We-Wqv" firstAttribute="centerX" secondItem="U1f-JH-m2N" secondAttribute="centerX" id="3dB-ve-vFv"/>
-                                            <constraint firstAttribute="bottom" secondItem="BAz-We-Wqv" secondAttribute="bottom" id="7C5-J9-cGU"/>
+                                            <constraint firstAttribute="bottom" secondItem="BAz-We-Wqv" secondAttribute="bottom" constant="24" id="7C5-J9-cGU"/>
+                                            <constraint firstItem="EkN-yI-67t" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="U1f-JH-m2N" secondAttribute="leading" constant="20" id="GF6-sn-zH0"/>
+                                            <constraint firstItem="EkN-yI-67t" firstAttribute="top" secondItem="BAz-We-Wqv" secondAttribute="bottom" constant="4" id="KJd-y5-Nic"/>
+                                            <constraint firstItem="EkN-yI-67t" firstAttribute="centerX" secondItem="U1f-JH-m2N" secondAttribute="centerX" id="MOB-xy-yaH"/>
+                                            <constraint firstAttribute="bottom" secondItem="EkN-yI-67t" secondAttribute="bottom" constant="5" id="Qhz-tE-D3k"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EkN-yI-67t" secondAttribute="trailing" constant="20" id="YpS-BQ-pHQ"/>
                                             <constraint firstItem="BAz-We-Wqv" firstAttribute="top" secondItem="U1f-JH-m2N" secondAttribute="top" id="ene-Lf-cEb"/>
                                             <constraint firstItem="BAz-We-Wqv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="U1f-JH-m2N" secondAttribute="leading" id="j53-6b-7Zx"/>
+                                            <constraint firstAttribute="bottom" secondItem="EkN-yI-67t" secondAttribute="bottom" constant="5" id="wWz-dH-gVY"/>
                                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="BAz-We-Wqv" secondAttribute="trailing" id="zPU-jz-Owf"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="likeButton" destination="Ql7-BC-eDF" id="WUE-pb-AOe"/>
+                                            <outlet property="likeLabel" destination="uVd-vJ-nOd" id="Pie-dI-5it"/>
                                             <outlet property="nameFotoImage" destination="BAz-We-Wqv" id="FdK-6N-U43"/>
                                         </connections>
                                     </collectionViewCell>
@@ -500,8 +536,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="appleIcon" width="5040" height="5040"/>
-        <image name="fotohetvield" width="650" height="520"/>
+        <image name="appleIcon" width="1200" height="800"/>
+        <image name="fotojobs" width="120" height="79.919998168945312"/>
         <image name="freeRiderIcon" width="28" height="28"/>
         <image name="friend" width="30" height="31"/>
         <image name="groups" width="30" height="30"/>
