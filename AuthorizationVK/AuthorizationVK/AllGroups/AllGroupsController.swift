@@ -88,7 +88,7 @@ extension AllGroupsController : UITableViewDataSource {
 
         let iconName = group.nameIcon
         let nameGroup = group.nameGroup
-        cell.nameIconImage.createIconAvatar(image: iconName)
+        cell.nameIconImage.image = UIImage(named: iconName)
         cell.nameGroupLabel.text = nameGroup
 
         return cell

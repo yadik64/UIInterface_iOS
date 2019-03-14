@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cbU-Qk-ysJ">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -142,33 +142,34 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="89.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="freeRiderIcon" translatesAutoresizingMaskIntoConstraints="NO" id="i4G-lk-Zst" customClass="IconAvatar" customModule="AuthorizationVK" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="10.333333333333336" width="70" height="70"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="70" id="AeK-v4-loe"/>
-                                                        <constraint firstAttribute="width" constant="70" id="C71-Az-fj9"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free Rider" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCl-3F-gMs">
                                                     <rect key="frame" x="95" y="35.333333333333336" width="78.333333333333314" height="20.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFG-cg-N4S" customClass="IconAvatar" customModule="AuthorizationVK" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="10.333333333333336" width="70" height="70"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="LcP-81-l6c"/>
+                                                        <constraint firstAttribute="height" constant="70" id="yiL-Ui-Xd2"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zCl-3F-gMs" secondAttribute="bottom" constant="10" id="Avp-jy-5fH"/>
-                                                <constraint firstItem="i4G-lk-Zst" firstAttribute="top" secondItem="8tD-Yc-R0N" secondAttribute="top" constant="10" id="ThR-D3-DQb"/>
-                                                <constraint firstItem="zCl-3F-gMs" firstAttribute="leading" secondItem="i4G-lk-Zst" secondAttribute="trailing" constant="15" id="Uam-Zg-psn"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zCl-3F-gMs" secondAttribute="trailing" constant="15" id="lbi-Bf-tJq"/>
+                                                <constraint firstItem="eFG-cg-N4S" firstAttribute="leading" secondItem="8tD-Yc-R0N" secondAttribute="leading" constant="10" id="JPy-Mb-b6K"/>
+                                                <constraint firstAttribute="bottom" secondItem="eFG-cg-N4S" secondAttribute="bottom" constant="10" id="JvW-eW-F3X"/>
+                                                <constraint firstItem="zCl-3F-gMs" firstAttribute="leading" secondItem="eFG-cg-N4S" secondAttribute="trailing" constant="15" id="QHn-rD-oRf"/>
+                                                <constraint firstItem="eFG-cg-N4S" firstAttribute="top" secondItem="8tD-Yc-R0N" secondAttribute="top" constant="10" id="WJ5-2F-XDQ"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zCl-3F-gMs" secondAttribute="trailing" constant="15" id="npz-Zx-N3F"/>
                                                 <constraint firstItem="zCl-3F-gMs" firstAttribute="top" secondItem="8tD-Yc-R0N" secondAttribute="top" constant="35" id="sFN-3y-GNg"/>
-                                                <constraint firstItem="i4G-lk-Zst" firstAttribute="leading" secondItem="8tD-Yc-R0N" secondAttribute="leading" constant="10" id="tfS-KI-JTl"/>
-                                                <constraint firstAttribute="bottom" secondItem="i4G-lk-Zst" secondAttribute="bottom" constant="10" id="tiW-2r-g3J"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameGroupLabel" destination="zCl-3F-gMs" id="I9a-su-Es5"/>
-                                            <outlet property="nameIconImage" destination="i4G-lk-Zst" id="sJ4-aF-aDp"/>
+                                            <outlet property="nameIconImage" destination="eFG-cg-N4S" id="dAP-R6-8Sy"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -233,33 +234,34 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="89.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appleIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Hvj-Pb-Jgz" customClass="IconAvatar" customModule="AuthorizationVK" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="10.333333333333336" width="70" height="70"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="70" id="8AP-es-s91"/>
-                                                        <constraint firstAttribute="width" constant="70" id="JxG-r9-vXI"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Developers" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0K-L4-dIr">
                                                     <rect key="frame" x="95" y="35.333333333333336" width="117.66666666666669" height="20.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdU-xf-JmV" customClass="IconAvatar" customModule="AuthorizationVK" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="10.333333333333336" width="70" height="70"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="cfN-rq-8zb"/>
+                                                        <constraint firstAttribute="height" constant="70" id="dc1-r4-XtW"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="l0K-L4-dIr" firstAttribute="leading" secondItem="Hvj-Pb-Jgz" secondAttribute="trailing" constant="15" id="1KX-kk-rLG"/>
+                                                <constraint firstItem="cdU-xf-JmV" firstAttribute="top" secondItem="WyL-up-YH3" secondAttribute="top" constant="10" id="6q7-Ph-hYr"/>
                                                 <constraint firstItem="l0K-L4-dIr" firstAttribute="top" secondItem="WyL-up-YH3" secondAttribute="top" constant="35" id="BSy-ru-kFY"/>
-                                                <constraint firstItem="Hvj-Pb-Jgz" firstAttribute="top" secondItem="WyL-up-YH3" secondAttribute="top" constant="10" id="MC3-jO-9Ya"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="l0K-L4-dIr" secondAttribute="trailing" constant="15" id="UZk-Xn-QXo"/>
-                                                <constraint firstAttribute="bottom" secondItem="Hvj-Pb-Jgz" secondAttribute="bottom" constant="10" id="c47-Eq-fgt"/>
+                                                <constraint firstAttribute="bottom" secondItem="cdU-xf-JmV" secondAttribute="bottom" constant="10" id="HoS-Ky-1Fa"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="l0K-L4-dIr" secondAttribute="trailing" constant="15" id="KqW-IY-uPh"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="l0K-L4-dIr" secondAttribute="bottom" constant="10" id="giC-Bl-Dvn"/>
-                                                <constraint firstItem="Hvj-Pb-Jgz" firstAttribute="leading" secondItem="WyL-up-YH3" secondAttribute="leading" constant="10" id="xlA-vS-pZi"/>
+                                                <constraint firstItem="cdU-xf-JmV" firstAttribute="leading" secondItem="WyL-up-YH3" secondAttribute="leading" constant="10" id="sB2-ZP-Z0p"/>
+                                                <constraint firstItem="l0K-L4-dIr" firstAttribute="leading" secondItem="cdU-xf-JmV" secondAttribute="trailing" constant="15" id="xEP-5P-UKy"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameGroupLabel" destination="l0K-L4-dIr" id="53O-Pe-z2y"/>
-                                            <outlet property="nameIconImage" destination="Hvj-Pb-Jgz" id="wR7-qE-A1s"/>
+                                            <outlet property="nameIconImage" destination="cdU-xf-JmV" id="C4p-ba-MX7"/>
                                             <segue destination="ip0-BD-yXn" kind="unwind" identifier="addGroup" unwindAction="addGroupWithSegue:" id="Mos-ag-0ul"/>
                                         </connections>
                                     </tableViewCell>
@@ -330,27 +332,28 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hetvield" translatesAutoresizingMaskIntoConstraints="NO" id="MuU-KN-NoV" customClass="IconAvatar" customModule="AuthorizationVK" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHs-To-ytc" customClass="IconAvatar" customModule="AuthorizationVK" customModuleProvider="target">
                                                     <rect key="frame" x="10" y="10" width="70" height="70"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="70" id="6fd-2G-2qa"/>
-                                                        <constraint firstAttribute="width" constant="70" id="SKI-Dj-ZJJ"/>
+                                                        <constraint firstAttribute="height" constant="70" id="Ebw-nW-pMl"/>
+                                                        <constraint firstAttribute="width" constant="70" id="cmi-Wn-D44"/>
                                                     </constraints>
-                                                </imageView>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="hbU-S4-WDk" secondAttribute="bottom" constant="24" id="8bl-CY-Fad"/>
-                                                <constraint firstItem="MuU-KN-NoV" firstAttribute="leading" secondItem="oYc-Eb-a16" secondAttribute="leading" constant="10" id="Axx-5o-nN1"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hbU-S4-WDk" secondAttribute="trailing" constant="15" id="JVa-fJ-xMn"/>
-                                                <constraint firstAttribute="bottom" secondItem="MuU-KN-NoV" secondAttribute="bottom" constant="10" id="bhQ-nq-p3y"/>
+                                                <constraint firstItem="uHs-To-ytc" firstAttribute="top" secondItem="oYc-Eb-a16" secondAttribute="top" constant="10" id="8v4-c2-eeb"/>
+                                                <constraint firstItem="hbU-S4-WDk" firstAttribute="leading" secondItem="uHs-To-ytc" secondAttribute="trailing" constant="15" id="HAE-yY-jIC"/>
+                                                <constraint firstAttribute="bottom" secondItem="uHs-To-ytc" secondAttribute="bottom" constant="10" id="XKt-Ec-XQ7"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hbU-S4-WDk" secondAttribute="trailing" constant="15" id="XkR-0b-L2d"/>
+                                                <constraint firstItem="uHs-To-ytc" firstAttribute="leading" secondItem="oYc-Eb-a16" secondAttribute="leading" constant="10" id="bHU-Fm-ByF"/>
                                                 <constraint firstItem="hbU-S4-WDk" firstAttribute="top" secondItem="oYc-Eb-a16" secondAttribute="top" constant="24" id="eZZ-xt-Kil"/>
-                                                <constraint firstItem="MuU-KN-NoV" firstAttribute="top" secondItem="oYc-Eb-a16" secondAttribute="top" constant="10" id="ggg-Oz-p16"/>
-                                                <constraint firstItem="hbU-S4-WDk" firstAttribute="leading" secondItem="MuU-KN-NoV" secondAttribute="trailing" constant="15" id="sjJ-t9-NtZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameFriendLabel" destination="hbU-S4-WDk" id="yj4-Kv-U67"/>
-                                            <outlet property="nameIconImage" destination="MuU-KN-NoV" id="3hN-70-Ehc"/>
+                                            <outlet property="nameIconImage" destination="uHs-To-ytc" id="0l2-8g-cNL"/>
                                             <segue destination="Af3-9d-wdG" kind="show" identifier="fotoCollectionSegue" id="YzT-0L-LyY"/>
                                         </connections>
                                     </tableViewCell>
@@ -536,12 +539,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="appleIcon" width="1200" height="800"/>
         <image name="fotojobs" width="120" height="79.919998168945312"/>
-        <image name="freeRiderIcon" width="28" height="28"/>
         <image name="friend" width="30" height="31"/>
         <image name="groups" width="30" height="30"/>
-        <image name="hetvield" width="70" height="70"/>
         <image name="image" width="256" height="256"/>
         <image name="Пароль" width="16" height="16"/>
     </resources>

@@ -10,6 +10,7 @@ import UIKit
 
 class AllGroupsCell: UITableViewCell {
 
+   
     @IBOutlet weak var nameIconImage: IconAvatar!
     @IBOutlet weak var nameGroupLabel: UILabel!
     

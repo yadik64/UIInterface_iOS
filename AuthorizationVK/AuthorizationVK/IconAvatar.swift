@@ -8,41 +8,29 @@
 
 import UIKit
 
-class IconAvatar: UIImageView {
+class IconAvatar: UIView {
 
-    let imageSize: (height: CGFloat, width: CGFloat) = (70.0, 70.0)
-    let cornerRadius: CGFloat = 35.0
-    @IBInspectable var shadow: Bool = true
-    @IBInspectable var shadowCollor: UIColor = .black
-    @IBInspectable var shadowOpacity: Float = 0.7
-    @IBInspectable var shadowOffset: CGSize = CGSize(width: 5.0, height: 5.0)
-    @IBInspectable var shadowRadius: CGFloat = 5.0
-    
-    func createIconAvatar(image name: String) {
-        
-        let imageContainer = UIView(frame: CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height))
-        
-        
-        if shadow {
-            imageContainer.clipsToBounds = false
-            imageContainer.layer.shadowColor = shadowCollor.cgColor
-            imageContainer.layer.shadowOpacity = shadowOpacity
-            imageContainer.layer.shadowOffset = shadowOffset
-            imageContainer.layer.shadowRadius = shadowRadius
-            imageContainer.layer.shadowPath = UIBezierPath(roundedRect: imageContainer.bounds, cornerRadius: cornerRadius).cgPath
+    var image: UIImage? {
+        didSet {
+            imageView.image = image
         }
+    }
+    private var imageView: UIImageView!
+    
+    override func awakeFromNib() {
         
-        let imageView = UIImageView(frame: imageContainer.bounds)
-        
+        imageView = UIImageView(frame: bounds)
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = cornerRadius
-        imageView.layer.borderColor = UIColor.black.cgColor
-        imageView.layer.borderWidth = 1.0
-        imageView.image = UIImage(named: name)
         imageView.contentMode = .scaleAspectFill
+        imageView.layer.cornerRadius = imageView.frame.width / 2
+        imageView.layer.borderColor = UIColor.black.cgColor
+        imageView.layer.borderWidth = 1
+        addSubview(imageView)
         
-        self.addSubview(imageContainer)
-        imageContainer.addSubview(imageView)
+        layer.shadowOffset = CGSize(width: 5, height: 5)
+        layer.shadowOpacity = 1
+        layer.shadowColor = UIColor.lightGray.cgColor
+        layer.cornerRadius = layer.frame.width / 2
         
     }
 

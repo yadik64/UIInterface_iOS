@@ -15,8 +15,10 @@ class FriendsCell: UITableViewCell {
     @IBOutlet weak var nameIconImage: IconAvatar!
     
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         
     }
 
@@ -25,5 +27,6 @@ class FriendsCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
 
 }
