@@ -8,42 +8,54 @@
 
 import UIKit
 
-
-//var userFriendsArray = [
-//    Friends(name: "Джеймс Алан Хэтфилд", foto: "fotohetvield"),
-//    Friends(name: "Стивен Пол (Стив) Джобс", foto: "fotojobs"),
-//    Friends(name: "Ральф «Сонни» Баргер", foto: "fotobarger"),
-//    Friends(name: "Джеймс Алан Хэтфилд", foto: "fotohetvield"),
-//    Friends(name: "Стивен Пол (Стив) Джобс", foto: "fotojobs"),
-//    Friends(name: "Ральф «Сонни» Баргер", foto: "fotobarger")
-//]
-
 class FriendsController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
     private var userFriendDictionary = [String: [Friends]]()
-    private var sectionName = [String]()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    static var sectionName: [String] {
+        get {
+            var charArray = [String]()
+            for friend in Friends.userFriendsArray {
+                if !charArray.contains(friend.friendStartChar){
+                    charArray.append(friend.friendStartChar)
+                }
+            }
+            return charArray.sorted()
+        }
+    }
+
+    override func loadView() {
+        super.loadView()
+
         for friend in Friends.userFriendsArray {
             if var value = userFriendDictionary[friend.friendStartChar] {
                 value.append(friend)
                 userFriendDictionary[friend.friendStartChar] = value
             } else {
                 userFriendDictionary[friend.friendStartChar] = [friend]
-                if !sectionName.contains(friend.friendStartChar) {
-                    sectionName.append(friend.friendStartChar)
-                }
             }
         }
-        
+
         Friends.userFriendsArray = Friends.userFriendsArray.sorted(by: {$0.friendStartChar < $1.friendStartChar})
-        sectionName = sectionName.sorted()
+
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         title = "Мои Друзья"
 
+    }
+    
+
+    @IBAction func pressChar(_ sender: CharControl) {
+        guard let section = FriendsController.sectionName.index(of: sender.selectedChar!) else {
+            return
+        }
+        
+        let indexPath = IndexPath(row: 0, section: section)
+        tableView.scrollToRow(at: indexPath, at: .top, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -55,7 +67,7 @@ class FriendsController: UIViewController {
             return
         }
         
-        let key = sectionName[indexPath.section]
+        let key = FriendsController.sectionName[indexPath.section]
         guard let friend = userFriendDictionary[key] else {
             return
         }
@@ -75,7 +87,7 @@ extension FriendsController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let key = sectionName[section]
+        let key = FriendsController.sectionName[section]
         guard let numberOfRows = userFriendDictionary[key]?.count else {
             return 0
         }
@@ -86,7 +98,7 @@ extension FriendsController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = FriendsCell.className()
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! FriendsCell
-        let key = sectionName[indexPath.section]
+        let key = FriendsController.sectionName[indexPath.section]
         guard let friend = userFriendDictionary[key] else { return cell }
         let fotoName = friend[indexPath.row].fotoFriend
         
@@ -97,11 +109,7 @@ extension FriendsController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionName[section]
-    }
-    
-    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return sectionName
+        return FriendsController.sectionName[section]
     }
 
 }

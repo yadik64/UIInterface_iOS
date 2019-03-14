@@ -31,8 +31,12 @@ struct Friends {
         Friends(nameFriend: "Майя Гёссен",         fotoFriend: "3"),
         Friends(nameFriend: "Евгения Яровая",      fotoFriend: "4"),
         Friends(nameFriend: "Валерий Коротков",    fotoFriend: "5"),
-        Friends(nameFriend: "Александр Сергеевич", fotoFriend: "6")
+        Friends(nameFriend: "Александр Сергеевич", fotoFriend: "6"),
+        Friends(nameFriend: "Александр Ильин",     fotoFriend: "7"),
+        Friends(nameFriend: "Виктория Рыхлова",    fotoFriend: "8"),
+        Friends(nameFriend: "Ольга Бережнова",     fotoFriend: "9"),
+        Friends(nameFriend: "Сергей Вилков",       fotoFriend: "10"),
+        Friends(nameFriend: "Арина Горожанова",    fotoFriend: "11")
     ]
-    
     
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cbU-Qk-ysJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -313,11 +313,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xO8-Bn-qjZ">
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <view key="tableFooterView" contentMode="scaleToFill" id="4Y1-R8-Hhd">
-                                    <rect key="frame" x="0.0" y="118" width="414" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendsCell" rowHeight="90" id="7I0-zf-KME" customClass="FriendsCell" customModule="AuthorizationVK" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="90"/>
@@ -363,13 +358,26 @@
                                     <outlet property="delegate" destination="JKX-mB-yS0" id="Snj-dr-uza"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Slw-Lo-PpB" customClass="CharControl" customModule="AuthorizationVK" customModuleProvider="target">
+                                <rect key="frame" x="384" y="64" width="30" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="lfX-xc-CVo"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="pressChar:" destination="JKX-mB-yS0" eventType="valueChanged" id="u6c-Wp-DgV"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Slw-Lo-PpB" firstAttribute="top" secondItem="Zoi-cH-tXK" secondAttribute="top" id="2rc-hD-xAf"/>
                             <constraint firstItem="xO8-Bn-qjZ" firstAttribute="leading" secondItem="Zoi-cH-tXK" secondAttribute="leading" id="Uje-qu-2rt"/>
                             <constraint firstItem="Zoi-cH-tXK" firstAttribute="bottom" secondItem="xO8-Bn-qjZ" secondAttribute="bottom" id="VTc-GS-TPi"/>
                             <constraint firstItem="Zoi-cH-tXK" firstAttribute="trailing" secondItem="xO8-Bn-qjZ" secondAttribute="trailing" id="Vo9-5C-pcu"/>
                             <constraint firstItem="xO8-Bn-qjZ" firstAttribute="top" secondItem="Zoi-cH-tXK" secondAttribute="top" id="YC5-Xj-fBW"/>
+                            <constraint firstItem="Zoi-cH-tXK" firstAttribute="bottom" secondItem="Slw-Lo-PpB" secondAttribute="bottom" id="kEw-Hi-aor"/>
+                            <constraint firstItem="Slw-Lo-PpB" firstAttribute="trailing" secondItem="Vao-JV-84q" secondAttribute="trailing" id="uBg-U1-QaU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zoi-cH-tXK"/>
                     </view>
