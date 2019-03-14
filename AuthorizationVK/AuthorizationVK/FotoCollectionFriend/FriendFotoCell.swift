@@ -17,8 +17,14 @@ class FriendFotoCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
+        tap.numberOfTapsRequired = 2
+        self.addGestureRecognizer(tap)
         
-        
+    }
+    
+    @objc func doubleTapped() {
+        pressLikeButton(likeButton)
     }
     
     @IBAction func pressLikeButton(_ sender: LikeButton) {
