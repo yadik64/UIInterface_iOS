@@ -11,6 +11,7 @@ import UIKit
 class FriendsController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    let searchController = UISearchController(searchResultsController: nil)
     
     private var userFriendDictionary = [String: [Friends]]()
     static var sectionName: [String] {
@@ -45,17 +46,36 @@ class FriendsController: UIViewController {
         super.viewDidLoad()
         
         title = "Мои Друзья"
+        
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Введите Имя или Фамилию"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
 
     }
-    
 
     @IBAction func pressChar(_ sender: CharControl) {
+        if sender.selectedChar == "search" {
+            searchController.searchBar.becomeFirstResponder()
+        }
+        
         guard let section = FriendsController.sectionName.index(of: sender.selectedChar!) else {
             return
         }
         
         let indexPath = IndexPath(row: 0, section: section)
         tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+    }
+    
+    //MARC: - SearchControll Methods
+    
+    private func searchBarIsEmpty() -> Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    private func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        Friends.filterFriendsArray = Friends.userFriendsArray.filter({friends: Friends})
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -79,7 +99,9 @@ class FriendsController: UIViewController {
 
 }
 
-extension FriendsController : UITableViewDelegate, UITableViewDataSource {
+//MARK: - UITableViewDataSourse
+
+extension FriendsController : UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return userFriendDictionary.count
@@ -112,4 +134,15 @@ extension FriendsController : UITableViewDelegate, UITableViewDataSource {
         return FriendsController.sectionName[section]
     }
 
+}
+
+//MARK: - UISearchResultUpdating
+
+extension FriendsController : UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
+    
+    
 }

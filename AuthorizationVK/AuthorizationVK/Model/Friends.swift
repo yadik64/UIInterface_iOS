@@ -25,6 +25,8 @@ struct Friends {
         }
     }
     
+    static var filterFriendsArray = [Friends]()
+    
     static var userFriendsArray: [Friends] = [
         Friends(nameFriend: "Михаил Приходько",    fotoFriend: "1"),
         Friends(nameFriend: "Роман Мотрохов",      fotoFriend: "2"),
