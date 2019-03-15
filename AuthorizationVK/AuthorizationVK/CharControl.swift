@@ -32,6 +32,14 @@ class CharControl: UIControl {
     
     private func setupView() {
         backgroundColor = UIColor.white.withAlphaComponent(0)
+        
+        
+        let button = UIButton(type: .custom)
+        let searchButtonImage = UIImage(named: "searchButton")
+        button.setImage(searchButtonImage, for: .normal)
+        button.addTarget(self, action: #selector(selectChar(_:)), for: .touchUpInside)
+        buttonsArray.append(button)
+        
         for char in FriendsController.sectionName {
             let button = UIButton(type: .system)
             button.setTitle(char, for: .normal)
@@ -53,7 +61,8 @@ class CharControl: UIControl {
     
     private func updateSelectChar() {
         for (index, button) in buttonsArray.enumerated() {
-            let char = FriendsController.sectionName[index]
+            guard index == buttonsArray.count - 1 else {continue}
+            let char = FriendsController.sectionName[index - 1]
             button.isSelected = char == selectedChar
         }
     }
@@ -61,8 +70,12 @@ class CharControl: UIControl {
     @objc func selectChar(_ sender: UIButton) {
         
         guard let index = buttonsArray.index(of: sender) else { return }
-        let char = FriendsController.sectionName[index]
-        selectedChar = char
+        if index == 0 {
+            selectedChar = "search"
+        } else {
+            let char = FriendsController.sectionName[index - 1]
+            selectedChar = char
+        }
         
     }
     
