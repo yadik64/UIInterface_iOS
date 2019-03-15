@@ -60,6 +60,7 @@ class FriendsController: UIViewController {
             searchController.searchBar.becomeFirstResponder()
         }
         
+        guard !isFiltering() else { return }
         guard let section = FriendsController.sectionName.index(of: sender.selectedChar!) else {
             return
         }
