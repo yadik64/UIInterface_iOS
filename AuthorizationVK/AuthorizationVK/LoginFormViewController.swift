@@ -21,6 +21,10 @@ class LoginFormViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        authorizationButton.layer.cornerRadius = 5
+        authorizationButton.layer.borderColor = UIColor.white.cgColor
+        authorizationButton.layer.borderWidth = 1
+        
         loginTextField.becomeFirstResponder()
         loginTextField.delegate = self
         passwordTextField.delegate = self

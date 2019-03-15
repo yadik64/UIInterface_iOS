@@ -25,6 +25,7 @@
 		10AF46642231A59A004FD977 /* FriendFotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AF46632231A59A004FD977 /* FriendFotoController.swift */; };
 		10AF46662231A5BB004FD977 /* FriendFotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AF46652231A5BB004FD977 /* FriendFotoCell.swift */; };
 		10C5204C223103D800B6F67B /* AllGroupsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5204B223103D800B6F67B /* AllGroupsCell.swift */; };
+		10EA00F6223B9B6F008AE2EE /* AMTitledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EA00F5223B9B6F008AE2EE /* AMTitledTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		10AF46632231A59A004FD977 /* FriendFotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFotoController.swift; sourceTree = "<group>"; };
 		10AF46652231A5BB004FD977 /* FriendFotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFotoCell.swift; sourceTree = "<group>"; };
 		10C5204B223103D800B6F67B /* AllGroupsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsCell.swift; sourceTree = "<group>"; };
+		10EA00F5223B9B6F008AE2EE /* AMTitledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMTitledTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				1010882E22304513006FEDE2 /* Friends */,
 				101729DB2228371400331C81 /* LoginFormViewController.swift */,
 				1033A70222352A99004490FD /* IconAvatar.swift */,
+				10EA00F5223B9B6F008AE2EE /* AMTitledTextField.swift */,
 				101729C92228368800331C81 /* AppDelegate.swift */,
 				101729CD2228368800331C81 /* Main.storyboard */,
 				10A4A5A6223AB4ED005DA11C /* CharControl.swift */,
@@ -238,6 +241,7 @@
 				1010883B223057E7006FEDE2 /* UserGroupsController.swift in Sources */,
 				10C5204C223103D800B6F67B /* AllGroupsCell.swift in Sources */,
 				10AF46662231A5BB004FD977 /* FriendFotoCell.swift in Sources */,
+				10EA00F6223B9B6F008AE2EE /* AMTitledTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
