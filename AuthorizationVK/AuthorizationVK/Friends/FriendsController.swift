@@ -75,7 +75,15 @@ class FriendsController: UIViewController {
     }
     
     private func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-        Friends.filterFriendsArray = Friends.userFriendsArray.filter({friends: Friends})
+        Friends.filterFriendsArray = Friends.userFriendsArray.filter({(friends : Friends) -> Bool in
+            return friends.nameFriend.lowercased().contains(searchText.lowercased())
+        })
+        
+        tableView.reloadData()
+    }
+    
+    private func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -87,6 +95,11 @@ class FriendsController: UIViewController {
             return
         }
         
+        if isFiltering() {
+            let friendFotoController = segue.destination as! FriendFotoController
+            friendFotoController.friendData = Friends.filterFriendsArray[indexPath.row]
+        } else {
+        
         let key = FriendsController.sectionName[indexPath.section]
         guard let friend = userFriendDictionary[key] else {
             return
@@ -95,6 +108,7 @@ class FriendsController: UIViewController {
         let friendFotoController = segue.destination as! FriendFotoController
         
         friendFotoController.friendData = friend[indexPath.row]
+        }
     }
 
 }
@@ -104,10 +118,19 @@ class FriendsController: UIViewController {
 extension FriendsController : UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        
+        if isFiltering() {
+            return 1
+        }
+        
         return userFriendDictionary.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if isFiltering() {
+            return Friends.filterFriendsArray.count
+        }
         
         let key = FriendsController.sectionName[section]
         guard let numberOfRows = userFriendDictionary[key]?.count else {
@@ -120,6 +143,14 @@ extension FriendsController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = FriendsCell.className()
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! FriendsCell
+        
+        if isFiltering() {
+            let fotoName = Friends.filterFriendsArray[indexPath.row].fotoFriend
+            cell.nameIconImage.image = UIImage(named: fotoName)
+            cell.nameFriendLabel.text = Friends.filterFriendsArray[indexPath.row].nameFriend
+            return cell
+        }
+        
         let key = FriendsController.sectionName[indexPath.section]
         guard let friend = userFriendDictionary[key] else { return cell }
         let fotoName = friend[indexPath.row].fotoFriend
@@ -131,6 +162,9 @@ extension FriendsController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if isFiltering() {
+            return "Результат поиска:"
+        }
         return FriendsController.sectionName[section]
     }
 
@@ -141,7 +175,7 @@ extension FriendsController : UITableViewDataSource {
 extension FriendsController : UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
-        
+        filterContentForSearchText(searchController.searchBar.text!)
     }
     
     
