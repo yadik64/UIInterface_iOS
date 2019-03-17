@@ -428,7 +428,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecQ-dd-JED" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2211.594202898551" y="795.6521739130435"/>
+            <point key="canvasLocation" x="3112" y="796"/>
         </scene>
         <!--Friend Foto Controller-->
         <scene sceneID="RrX-R8-rBG">
@@ -526,7 +526,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nmW-Iw-LZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3042.0289855072465" y="795.6521739130435"/>
+            <point key="canvasLocation" x="3929" y="796"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zxB-ln-sKe">
@@ -541,6 +541,7 @@
                     <connections>
                         <segue destination="E1G-8x-emg" kind="relationship" relationship="viewControllers" id="St5-cW-uEi"/>
                         <segue destination="LJC-um-zy0" kind="relationship" relationship="viewControllers" id="0MW-fF-bXJ"/>
+                        <segue destination="UYI-PI-TZE" kind="relationship" relationship="viewControllers" id="GtM-9s-9WH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDH-Nz-Nxa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -564,7 +565,52 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5WN-l6-c6x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1345" y="796"/>
+            <point key="canvasLocation" x="2251" y="796"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="PWX-E7-vwY">
+            <objects>
+                <viewController id="UYI-PI-TZE" customClass="NewsController" customModule="AuthorizationVK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l1T-PB-45y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yoo-4S-fjE">
+                                <rect key="frame" x="0.0" y="20" width="414" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="130" id="VLg-BT-1vN">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="130"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VLg-BT-1vN" id="WP6-TP-w8P">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="129.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="UYI-PI-TZE" id="8pj-3K-jgi"/>
+                                    <outlet property="delegate" destination="UYI-PI-TZE" id="adn-6P-FSb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yoo-4S-fjE" firstAttribute="leading" secondItem="HSu-Td-iYX" secondAttribute="leading" id="7Ys-Wa-btp"/>
+                            <constraint firstItem="HSu-Td-iYX" firstAttribute="bottom" secondItem="yoo-4S-fjE" secondAttribute="bottom" id="FgX-gd-bIT"/>
+                            <constraint firstItem="HSu-Td-iYX" firstAttribute="trailing" secondItem="yoo-4S-fjE" secondAttribute="trailing" id="gmw-s7-1cJ"/>
+                            <constraint firstItem="yoo-4S-fjE" firstAttribute="top" secondItem="HSu-Td-iYX" secondAttribute="top" id="qN5-uf-8yL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HSu-Td-iYX"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="xso-qn-beq"/>
+                    <connections>
+                        <outlet property="tableView" destination="yoo-4S-fjE" id="GXl-Nv-C6J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yqW-Q6-vNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1344.9275362318842" y="1525.271739130435"/>
         </scene>
         <!--Группы-->
         <scene sceneID="lgf-xO-l92">

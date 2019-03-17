@@ -15,14 +15,14 @@ struct Group : Hashable {
     
 }
 
-extension Group {
-    
-    static func == (left: Group, right: Group) -> Bool {
-        
-        guard left.nameGroup == right.nameGroup else {
-            return false
-        }
-        return true
-    }
-    
-}
+//extension Group {
+//
+//    static func == (left: Group, right: Group) -> Bool {
+//        
+//        guard left.nameGroup == right.nameGroup else {
+//            return false
+//        }
+//        return true
+//    }
+//
+//}
