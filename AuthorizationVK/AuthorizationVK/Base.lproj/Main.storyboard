@@ -541,7 +541,7 @@
                     <connections>
                         <segue destination="E1G-8x-emg" kind="relationship" relationship="viewControllers" id="St5-cW-uEi"/>
                         <segue destination="LJC-um-zy0" kind="relationship" relationship="viewControllers" id="0MW-fF-bXJ"/>
-                        <segue destination="UYI-PI-TZE" kind="relationship" relationship="viewControllers" id="GtM-9s-9WH"/>
+                        <segue destination="sal-gx-H1O" kind="relationship" relationship="viewControllers" id="OkI-Um-jM5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDH-Nz-Nxa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -567,7 +567,7 @@
             </objects>
             <point key="canvasLocation" x="2251" y="796"/>
         </scene>
-        <!--Item-->
+        <!--News Controller-->
         <scene sceneID="PWX-E7-vwY">
             <objects>
                 <viewController id="UYI-PI-TZE" customClass="NewsController" customModule="AuthorizationVK" customModuleProvider="target" sceneMemberID="viewController">
@@ -575,17 +575,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yoo-4S-fjE">
-                                <rect key="frame" x="0.0" y="20" width="414" height="667"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yoo-4S-fjE">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="130" id="VLg-BT-1vN">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="130"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="610" id="VLg-BT-1vN" customClass="NewsCell" customModule="AuthorizationVK" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="610"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VLg-BT-1vN" id="WP6-TP-w8P">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="129.66666666666666"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="610"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DX-Nr-jTL">
+                                                    <rect key="frame" x="20" y="11" width="374" height="224"/>
+                                                    <string key="text">An indexed table is fundamentally the same as a plain-style table, but with an index running down the right hand edge. Typically, this index displays letters or numbers, which the user can tap to automatically scroll the table to the relevant section. In this tutorial,a number of car brands will be displayed in a table view and the first letter will be used for the index. This tutorial is made with Xcode 9 and built for iOS 11.
+
+</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newsFoto4" translatesAutoresizingMaskIntoConstraints="NO" id="JEj-3F-KAB">
+                                                    <rect key="frame" x="10" y="245" width="394" height="360"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="JEj-3F-KAB" secondAttribute="height" multiplier="197:180" id="Mrp-wC-ZpW"/>
+                                                        <constraint firstAttribute="height" constant="360" id="lBw-D6-edU"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JEj-3F-KAB" firstAttribute="top" secondItem="8DX-Nr-jTL" secondAttribute="bottom" constant="10" id="Aec-PO-avn"/>
+                                                <constraint firstAttribute="trailing" secondItem="8DX-Nr-jTL" secondAttribute="trailing" constant="20" id="DvW-E3-UVb"/>
+                                                <constraint firstItem="8DX-Nr-jTL" firstAttribute="leading" secondItem="WP6-TP-w8P" secondAttribute="leading" constant="20" id="ZuT-py-5ON"/>
+                                                <constraint firstItem="8DX-Nr-jTL" firstAttribute="top" secondItem="WP6-TP-w8P" secondAttribute="top" constant="11" id="eMg-Y7-sg1"/>
+                                                <constraint firstAttribute="bottom" secondItem="JEj-3F-KAB" secondAttribute="bottom" constant="5" id="eSB-HV-IoS"/>
+                                                <constraint firstItem="JEj-3F-KAB" firstAttribute="leading" secondItem="WP6-TP-w8P" secondAttribute="leading" constant="10" id="iwh-wO-Z1j"/>
+                                                <constraint firstAttribute="trailing" secondItem="JEj-3F-KAB" secondAttribute="trailing" constant="10" id="jLe-L8-ZY1"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imagePostView" destination="JEj-3F-KAB" id="gSV-Ad-Bi8"/>
+                                            <outlet property="textPostLabel" destination="8DX-Nr-jTL" id="oL1-wh-giK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -603,14 +635,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HSu-Td-iYX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="xso-qn-beq"/>
+                    <navigationItem key="navigationItem" id="smV-4A-GvW"/>
                     <connections>
                         <outlet property="tableView" destination="yoo-4S-fjE" id="GXl-Nv-C6J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqW-Q6-vNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1344.9275362318842" y="1525.271739130435"/>
+            <point key="canvasLocation" x="2251" y="1577"/>
         </scene>
         <!--Группы-->
         <scene sceneID="lgf-xO-l92">
@@ -631,12 +663,33 @@
             </objects>
             <point key="canvasLocation" x="2251" y="7"/>
         </scene>
+        <!--Новости-->
+        <scene sceneID="AI0-kE-S1v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sal-gx-H1O" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Новости" image="news" id="xso-qn-beq"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wLe-fX-fwo">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UYI-PI-TZE" kind="relationship" relationship="rootViewController" id="ztT-Q1-8ob"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="It2-OK-Bur" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1345" y="1577"/>
+        </scene>
     </scenes>
     <resources>
         <image name="fotojobs" width="120" height="79.919998168945312"/>
         <image name="friend" width="30" height="31"/>
         <image name="groups" width="30" height="30"/>
         <image name="image" width="256" height="256"/>
+        <image name="news" width="30" height="30"/>
+        <image name="newsFoto4" width="310" height="500"/>
         <image name="Пароль" width="16" height="16"/>
     </resources>
 </document>

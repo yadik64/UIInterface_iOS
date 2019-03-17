@@ -15,36 +15,21 @@ class NewsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Новости"
+        
         tableView.sectionHeaderHeight = 70.0
         tableView.sectionFooterHeight = 25.0
         tableView.register(UINib(nibName: "NewsTableHeader", bundle: Bundle.main), forHeaderFooterViewReuseIdentifier: "NewsTableHeader")
         tableView.register(UINib(nibName: "NewsTableFooter", bundle: nibBundle), forHeaderFooterViewReuseIdentifier: "NewsTableFooter")
-        
-        
-        
     }
     
-    @objc func test() {
-        print("YES")
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
 extension NewsController : UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 11
+        return Friends.newsArray.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,8 +37,11 @@ extension NewsController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsCell
         
+        cell.textPostLabel.text = Friends.newsArray[indexPath.section].text
+        cell.imagePostView.image = UIImage(named: Friends.newsArray[indexPath.section].newsPhotoName?[0] ?? "newsPhoto2")
+
         return cell
     }
     
@@ -65,18 +53,27 @@ extension NewsController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "NewsTableHeader") as! NewsTableHeader
         
-        let icon = UIImage(named: Friends.userFriendsArray[section].fotoFriend)
-        let userName = Friends.userFriendsArray[section].nameFriend
+        header.contentView.backgroundColor = UIColor.white
+        
+        let icon = UIImage(named: Friends.newsArray[section].fotoFriend)
+        let userName = Friends.newsArray[section].nameFriend
         header.iconAvatarView.image = icon
         header.nameUserLabel.text = userName
-        
+        header.creationTimeLabel.text = Friends.newsArray[section].creationTime
+
         return header
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: "NewsTableFooter") as! NewsTableFooter
         
+        footer.likeLabel.text = String(Friends.newsArray[section].likeCount)
+        footer.viewedCount.text = String(Friends.newsArray[section].viewedCount)
         return footer
     }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    } 
     
 }
