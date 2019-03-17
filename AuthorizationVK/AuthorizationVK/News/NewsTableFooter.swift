@@ -10,12 +10,26 @@ import UIKit
 
 class NewsTableFooter: UITableViewHeaderFooterView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet weak var likeButton: LikeButton!
+    @IBOutlet weak var likeLabel: UILabel!
+    @IBOutlet weak var viewedCount: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+   
+        
     }
-    */
-
+    
+    @IBAction func pressLikeButton(_ sender: LikeButton) {
+        
+        if sender.bool {
+            likeLabel.text = String(Int(likeLabel.text!)! + 1)
+            sender.bool = false
+        } else {
+            likeLabel.text = String(Int(likeLabel.text!)! - 1)
+            sender.bool = true
+        }
+        
+    }
 }

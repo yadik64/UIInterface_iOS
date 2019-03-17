@@ -35,7 +35,7 @@ import UIKit
     override func draw(_ rect: CGRect) {
         
         let bezierPath = UIBezierPath(heartIn: self.bounds)
-        let color: UIColor = #colorLiteral(red: 0.1333333333, green: 0.5058823529, blue: 0.9647058824, alpha: 1)
+        let color: UIColor = #colorLiteral(red: 0.2901960784, green: 0.5215686275, blue: 0.6980392157, alpha: 1)
         
         
         if bool {
