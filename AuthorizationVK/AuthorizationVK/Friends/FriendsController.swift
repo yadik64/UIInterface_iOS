@@ -181,3 +181,6 @@ extension FriendsController : UISearchResultsUpdating {
     
     
 }
+
+
+let array: [(title : String, emblem : UIImageView)] = []
