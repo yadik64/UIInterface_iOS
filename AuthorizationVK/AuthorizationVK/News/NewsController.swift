@@ -52,7 +52,7 @@ extension NewsController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "NewsTableHeader") as! NewsTableHeader
-        
+
         header.contentView.backgroundColor = UIColor.white
         
         let icon = UIImage(named: Friends.newsArray[section].fotoFriend)
@@ -79,6 +79,6 @@ extension NewsController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return false
     }
-    
+
 }
 
