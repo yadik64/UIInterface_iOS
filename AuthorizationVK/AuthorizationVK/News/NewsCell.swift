@@ -12,6 +12,7 @@ class NewsCell: UITableViewCell {
 
     @IBOutlet weak var imagePostView: UIImageView!
     @IBOutlet weak var textPostLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,5 +23,5 @@ class NewsCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }
