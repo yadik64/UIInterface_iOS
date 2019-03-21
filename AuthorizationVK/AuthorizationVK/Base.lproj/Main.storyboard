@@ -509,6 +509,14 @@
                                                         <constraint firstItem="Ql7-BC-eDF" firstAttribute="leading" secondItem="EkN-yI-67t" secondAttribute="leading" id="umx-Ou-x3e"/>
                                                     </constraints>
                                                 </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsc-Lb-zT0" customClass="LikeView" customModule="AuthorizationVK" customModuleProvider="target">
+                                                    <rect key="frame" x="197" y="197" width="20" height="20"/>
+                                                    <color key="backgroundColor" red="0.29803921568627451" green="0.29803921568627451" blue="0.29803921568627451" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="Bzi-Qh-aIB"/>
+                                                        <constraint firstAttribute="width" constant="20" id="pPT-e4-C88"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                         </view>
                                         <constraints>
@@ -516,17 +524,20 @@
                                             <constraint firstAttribute="bottom" secondItem="BAz-We-Wqv" secondAttribute="bottom" constant="24" id="7C5-J9-cGU"/>
                                             <constraint firstItem="EkN-yI-67t" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="U1f-JH-m2N" secondAttribute="leading" constant="20" id="GF6-sn-zH0"/>
                                             <constraint firstItem="EkN-yI-67t" firstAttribute="top" secondItem="BAz-We-Wqv" secondAttribute="bottom" constant="4" id="KJd-y5-Nic"/>
+                                            <constraint firstItem="rsc-Lb-zT0" firstAttribute="centerX" secondItem="U1f-JH-m2N" secondAttribute="centerX" id="Kqa-d8-QQM"/>
                                             <constraint firstItem="EkN-yI-67t" firstAttribute="centerX" secondItem="U1f-JH-m2N" secondAttribute="centerX" id="MOB-xy-yaH"/>
                                             <constraint firstAttribute="bottom" secondItem="EkN-yI-67t" secondAttribute="bottom" constant="5" id="Qhz-tE-D3k"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EkN-yI-67t" secondAttribute="trailing" constant="20" id="YpS-BQ-pHQ"/>
                                             <constraint firstItem="BAz-We-Wqv" firstAttribute="top" secondItem="U1f-JH-m2N" secondAttribute="top" id="ene-Lf-cEb"/>
                                             <constraint firstItem="BAz-We-Wqv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="U1f-JH-m2N" secondAttribute="leading" id="j53-6b-7Zx"/>
+                                            <constraint firstItem="rsc-Lb-zT0" firstAttribute="centerY" secondItem="U1f-JH-m2N" secondAttribute="centerY" id="naT-HV-4ph"/>
                                             <constraint firstAttribute="bottom" secondItem="EkN-yI-67t" secondAttribute="bottom" constant="5" id="wWz-dH-gVY"/>
                                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="BAz-We-Wqv" secondAttribute="trailing" id="zPU-jz-Owf"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="likeButton" destination="Ql7-BC-eDF" id="WUE-pb-AOe"/>
                                             <outlet property="likeLabel" destination="uVd-vJ-nOd" id="Pie-dI-5it"/>
+                                            <outlet property="likeView" destination="rsc-Lb-zT0" id="X0E-NJ-xNe"/>
                                             <outlet property="nameFotoImage" destination="BAz-We-Wqv" id="FdK-6N-U43"/>
                                         </connections>
                                     </collectionViewCell>
