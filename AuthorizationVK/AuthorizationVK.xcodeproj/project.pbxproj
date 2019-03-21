@@ -32,6 +32,7 @@
 		10AF466022318C0D004FD977 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AF465F22318C0D004FD977 /* FriendsController.swift */; };
 		10AF46642231A59A004FD977 /* FriendFotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AF46632231A59A004FD977 /* FriendFotoController.swift */; };
 		10AF46662231A5BB004FD977 /* FriendFotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AF46652231A5BB004FD977 /* FriendFotoCell.swift */; };
+		10B2A6492243A0810011A36E /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B2A6482243A0810011A36E /* LoadingIndicator.swift */; };
 		10C5204C223103D800B6F67B /* AllGroupsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5204B223103D800B6F67B /* AllGroupsCell.swift */; };
 		10EA00F6223B9B6F008AE2EE /* AMTitledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EA00F5223B9B6F008AE2EE /* AMTitledTextField.swift */; };
 		10F675E8223EF811007640C8 /* FriendFotoCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F675E7223EF811007640C8 /* FriendFotoCollectionViewLayout.swift */; };
@@ -65,6 +66,7 @@
 		10AF465F22318C0D004FD977 /* FriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
 		10AF46632231A59A004FD977 /* FriendFotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFotoController.swift; sourceTree = "<group>"; };
 		10AF46652231A5BB004FD977 /* FriendFotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFotoCell.swift; sourceTree = "<group>"; };
+		10B2A6482243A0810011A36E /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		10C5204B223103D800B6F67B /* AllGroupsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsCell.swift; sourceTree = "<group>"; };
 		10EA00F5223B9B6F008AE2EE /* AMTitledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMTitledTextField.swift; sourceTree = "<group>"; };
 		10F675E7223EF811007640C8 /* FriendFotoCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFotoCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -143,7 +145,6 @@
 			children = (
 				105B9CA0223EC8CB00996B5F /* UI Elements */,
 				10122EB7223D9B95003A668E /* News */,
-				1033A7322235ED94004490FD /* LikeButton */,
 				10AF46622231A56A004FD977 /* FotoCollectionFriend */,
 				10AF466122318C3D004FD977 /* Model */,
 				1010884022307322006FEDE2 /* AllGroups */,
@@ -159,14 +160,6 @@
 			path = AuthorizationVK;
 			sourceTree = "<group>";
 		};
-		1033A7322235ED94004490FD /* LikeButton */ = {
-			isa = PBXGroup;
-			children = (
-				1033A7332235EDC3004490FD /* LikeButton.swift */,
-			);
-			path = LikeButton;
-			sourceTree = "<group>";
-		};
 		105B9CA0223EC8CB00996B5F /* UI Elements */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +169,8 @@
 				10EA00F5223B9B6F008AE2EE /* AMTitledTextField.swift */,
 				105B9C9C223E92D300996B5F /* CommentButton.swift */,
 				10F675E7223EF811007640C8 /* FriendFotoCollectionViewLayout.swift */,
+				10B2A6482243A0810011A36E /* LoadingIndicator.swift */,
+				1033A7332235EDC3004490FD /* LikeButton.swift */,
 			);
 			path = "UI Elements";
 			sourceTree = "<group>";
@@ -283,6 +278,7 @@
 				10122ECB223DB415003A668E /* NewsTableFooter.swift in Sources */,
 				101729CA2228368800331C81 /* AppDelegate.swift in Sources */,
 				10F675E8223EF811007640C8 /* FriendFotoCollectionViewLayout.swift in Sources */,
+				10B2A6492243A0810011A36E /* LoadingIndicator.swift in Sources */,
 				10AF465C22318841004FD977 /* Friends.swift in Sources */,
 				1006189722310DF50094A08C /* UserGroupsCell.swift in Sources */,
 				105B9C9D223E92D300996B5F /* CommentButton.swift in Sources */,
