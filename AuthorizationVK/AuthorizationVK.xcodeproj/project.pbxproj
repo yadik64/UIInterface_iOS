@@ -23,6 +23,7 @@
 		101729DC2228371400331C81 /* LoginFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101729DB2228371400331C81 /* LoginFormViewController.swift */; };
 		1033A70322352A99004490FD /* IconAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1033A70222352A99004490FD /* IconAvatar.swift */; };
 		1033A7342235EDC3004490FD /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1033A7332235EDC3004490FD /* LikeButton.swift */; };
+		103C0C9A22480E7800DEAF64 /* IndicatorCloudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103C0C9922480E7800DEAF64 /* IndicatorCloudView.swift */; };
 		105B9C9D223E92D300996B5F /* CommentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105B9C9C223E92D300996B5F /* CommentButton.swift */; };
 		105B9C9F223EC0BC00996B5F /* Viewed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105B9C9E223EC0BC00996B5F /* Viewed.swift */; };
 		10A4A5A7223AB4ED005DA11C /* CharControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4A5A6223AB4ED005DA11C /* CharControl.swift */; };
@@ -58,6 +59,7 @@
 		101729DB2228371400331C81 /* LoginFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormViewController.swift; sourceTree = "<group>"; };
 		1033A70222352A99004490FD /* IconAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconAvatar.swift; sourceTree = "<group>"; };
 		1033A7332235EDC3004490FD /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
+		103C0C9922480E7800DEAF64 /* IndicatorCloudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorCloudView.swift; sourceTree = "<group>"; };
 		105B9C9C223E92D300996B5F /* CommentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentButton.swift; sourceTree = "<group>"; };
 		105B9C9E223EC0BC00996B5F /* Viewed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewed.swift; sourceTree = "<group>"; };
 		10A4A5A6223AB4ED005DA11C /* CharControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharControl.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				10B2A6482243A0810011A36E /* LoadingIndicator.swift */,
 				1033A7332235EDC3004490FD /* LikeButton.swift */,
 				10B2A64E2243BD100011A36E /* LikeView.swift */,
+				103C0C9922480E7800DEAF64 /* IndicatorCloudView.swift */,
 			);
 			path = "UI Elements";
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				10AF465A22315331004FD977 /* Group.swift in Sources */,
 				10AF46642231A59A004FD977 /* FriendFotoController.swift in Sources */,
 				10AF466022318C0D004FD977 /* FriendsController.swift in Sources */,
+				103C0C9A22480E7800DEAF64 /* IndicatorCloudView.swift in Sources */,
 				10AF465E22318BEA004FD977 /* FriendsCell.swift in Sources */,
 				105B9C9F223EC0BC00996B5F /* Viewed.swift in Sources */,
 				101729DC2228371400331C81 /* LoginFormViewController.swift in Sources */,

@@ -106,24 +106,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UtR-7F-r7j" customClass="LoadingIndicator" customModule="AuthorizationVK" customModuleProvider="target">
-                                                <rect key="frame" x="177" y="328" width="60" height="20"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="2fO-Kv-wrb"/>
-                                                    <constraint firstAttribute="height" constant="20" id="664-3G-6Gv"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="colorIndificator">
-                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="colorBorder">
-                                                        <color key="value" red="0.2901960784" green="0.52156862749999999" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="diameterBall">
-                                                        <integer key="value" value="20"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJU-D6-4gc" customClass="IndicatorCloudView" customModule="AuthorizationVK" customModuleProvider="target">
+                                                <rect key="frame" x="70" y="385" width="275" height="140"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.29803921568627451" green="0.45882352941176469" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -133,14 +118,14 @@
                                             <constraint firstItem="u92-F5-DQM" firstAttribute="centerX" secondItem="KOv-yC-om4" secondAttribute="centerX" id="57y-3h-siD"/>
                                             <constraint firstItem="F7L-Cr-LXf" firstAttribute="centerX" secondItem="KOv-yC-om4" secondAttribute="centerX" id="6n3-XT-u85"/>
                                             <constraint firstItem="ImM-aS-0Tm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KOv-yC-om4" secondAttribute="leading" constant="15" id="9YI-uy-8ck"/>
-                                            <constraint firstItem="UtR-7F-r7j" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KOv-yC-om4" secondAttribute="leading" constant="15" id="9YP-Ir-vwh"/>
-                                            <constraint firstItem="UtR-7F-r7j" firstAttribute="top" secondItem="u92-F5-DQM" secondAttribute="bottom" constant="15" id="Ba6-S5-O1S"/>
+                                            <constraint firstItem="fJU-D6-4gc" firstAttribute="top" secondItem="u92-F5-DQM" secondAttribute="bottom" constant="72" id="HUY-q1-cWk"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="F7L-Cr-LXf" secondAttribute="trailing" constant="15" id="KMW-NW-h1G"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7BF-MC-G7n" secondAttribute="trailing" constant="15" id="LkY-8S-u0s"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UtR-7F-r7j" secondAttribute="trailing" constant="15" id="aQb-5M-oX2"/>
+                                            <constraint firstItem="fJU-D6-4gc" firstAttribute="leading" secondItem="KOv-yC-om4" secondAttribute="leading" constant="70" id="PS5-0Y-h18"/>
+                                            <constraint firstAttribute="bottom" secondItem="fJU-D6-4gc" secondAttribute="bottom" constant="191" id="Ssf-Xr-4IK"/>
+                                            <constraint firstAttribute="trailing" secondItem="fJU-D6-4gc" secondAttribute="trailing" constant="69" id="Ytm-gS-fQV"/>
                                             <constraint firstItem="ImM-aS-0Tm" firstAttribute="centerX" secondItem="KOv-yC-om4" secondAttribute="centerX" id="bln-5N-d4o"/>
                                             <constraint firstItem="u92-F5-DQM" firstAttribute="top" secondItem="F7L-Cr-LXf" secondAttribute="bottom" constant="25" id="db6-Lb-lvQ"/>
-                                            <constraint firstItem="UtR-7F-r7j" firstAttribute="centerX" secondItem="KOv-yC-om4" secondAttribute="centerX" id="dpd-Tk-qoC"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="u92-F5-DQM" secondAttribute="trailing" constant="15" id="i1Z-N5-46e"/>
                                             <constraint firstItem="F7L-Cr-LXf" firstAttribute="top" secondItem="ImM-aS-0Tm" secondAttribute="bottom" constant="25" id="nL2-gr-O0M"/>
                                             <constraint firstItem="F7L-Cr-LXf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KOv-yC-om4" secondAttribute="leading" constant="15" id="oUQ-D3-Y2p"/>
