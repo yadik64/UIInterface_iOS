@@ -27,6 +27,7 @@ struct Friends {
     
     var nameFriend: String
     var fotoFriend: String
+    var fotoAlbom: [String]?
     var friendStartChar: String {
         get {
             let startChar = String(secondName.prefix(1))
@@ -43,17 +44,17 @@ struct Friends {
     static var filterFriendsArray = [Friends]()
     
     static var userFriendsArray: [Friends] = [
-        Friends(nameFriend: "Михаил Приходько",    fotoFriend: "1"),
-        Friends(nameFriend: "Роман Мотрохов",      fotoFriend: "2"),
-        Friends(nameFriend: "Майя Гёссен",         fotoFriend: "3"),
-        Friends(nameFriend: "Евгения Яровая",      fotoFriend: "4"),
-        Friends(nameFriend: "Валерий Коротков",    fotoFriend: "5"),
-        Friends(nameFriend: "Александр Сергеевич", fotoFriend: "6"),
-        Friends(nameFriend: "Александр Ильин",     fotoFriend: "7"),
-        Friends(nameFriend: "Виктория Рыхлова",    fotoFriend: "8"),
-        Friends(nameFriend: "Ольга Бережнова",     fotoFriend: "9"),
-        Friends(nameFriend: "Сергей Вилков",       fotoFriend: "10"),
-        Friends(nameFriend: "Арина Горожанова",    fotoFriend: "11")
+        Friends(nameFriend: "Михаил Приходько",    fotoFriend: "1", fotoAlbom: ["1", "22", "23"]),
+        Friends(nameFriend: "Роман Мотрохов",      fotoFriend: "2", fotoAlbom: ["2", "15", "19"]),
+        Friends(nameFriend: "Майя Гёссен",         fotoFriend: "3", fotoAlbom: ["3", "17", "24"]),
+        Friends(nameFriend: "Евгения Яровая",      fotoFriend: "4", fotoAlbom: ["4", "13", "21"]),
+        Friends(nameFriend: "Валерий Коротков",    fotoFriend: "5", fotoAlbom: ["5", "28", "29"]),
+        Friends(nameFriend: "Александр Сергеевич", fotoFriend: "6", fotoAlbom: ["6", "18", "25"]),
+        Friends(nameFriend: "Александр Ильин",     fotoFriend: "7", fotoAlbom: ["7", "26", "27"]),
+        Friends(nameFriend: "Виктория Рыхлова",    fotoFriend: "8", fotoAlbom: ["8", "12", "16"]),
+        Friends(nameFriend: "Ольга Бережнова",     fotoFriend: "9", fotoAlbom: ["9", "32", "33"]),
+        Friends(nameFriend: "Сергей Вилков",       fotoFriend: "10", fotoAlbom: ["10", "14", "20"]),
+        Friends(nameFriend: "Арина Горожанова",    fotoFriend: "11", fotoAlbom: ["11", "30", "31"])
     ]
     
     var likeCount: Int = 0
@@ -100,9 +101,10 @@ struct Friends {
                 viewedCount: 777),
         ]
     
-    init(nameFriend: String, fotoFriend: String) {
+    init(nameFriend: String, fotoFriend: String, fotoAlbom: [String]) {
         self.nameFriend = nameFriend
         self.fotoFriend = fotoFriend
+        self.fotoAlbom = fotoAlbom
     }
     
     init(nameFriend: String, fotoFriend: String, text: String, newsPhotoName: [String], like: Int, creationTime: String, viewedCount: Int) {

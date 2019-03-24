@@ -23,7 +23,8 @@ class FriendFotoController: UIViewController {
 extension FriendFotoController : UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        guard let number = friendData?.fotoAlbom?.count else { return 1}
+        return number
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -36,7 +37,7 @@ extension FriendFotoController : UICollectionViewDataSource, UICollectionViewDel
             return cell
         }
         
-        let foto = UIImage(named: (friendData?.fotoFriend)!) 
+        let foto = UIImage(named: (friendData?.fotoAlbom![indexPath.row])!)
         cell.nameFotoImage.image = foto
         
         return cell
