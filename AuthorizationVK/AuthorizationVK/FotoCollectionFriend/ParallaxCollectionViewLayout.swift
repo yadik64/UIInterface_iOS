@@ -13,7 +13,6 @@ class ParallaxCollectionViewLayout: UICollectionViewFlowLayout {
         return super.layoutAttributesForElements(in: rect)?.compactMap { $0.copy() as? UICollectionViewLayoutAttributes }.compactMap(addParallaxToAttributes)
     }
     
-    // We need to return true here so that everytime we scroll the collection view, the attributes are updated.
     override public func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
@@ -26,13 +25,12 @@ class ParallaxCollectionViewLayout: UICollectionViewFlowLayout {
         let offset = collectionView.contentOffset.x
         let itemX = attributes.center.x - offset
         let position = (itemX - centerX) / width
-        let contentView = collectionView.cellForItem(at: attributes.indexPath)?.contentView
         
-        if abs(position) >= 1 {
-            contentView?.transform = .identity
+        if position <= 0 && position > -1 {
+            let scaleFactor = 0.5 * position + 1.0
+            attributes.transform = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
         } else {
-            let transitionX = -(width * 0.5 * position)
-            contentView?.transform = CGAffineTransform(translationX: transitionX, y: 0)
+            attributes.transform = .identity
         }
         
         return attributes
