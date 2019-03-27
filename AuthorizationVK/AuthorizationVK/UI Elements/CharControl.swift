@@ -69,7 +69,7 @@ class CharControl: UIControl {
     
     @objc func selectChar(_ sender: UIButton) {
         
-        guard let index = buttonsArray.index(of: sender) else { return }
+        guard let index = buttonsArray.firstIndex(of: sender) else { return }
         if index == 0 {
             selectedChar = "search"
         } else {

@@ -61,7 +61,7 @@ class FriendsController: UIViewController {
         }
         
         guard !isFiltering() else { return }
-        guard let section = FriendsController.sectionName.index(of: sender.selectedChar!) else {
+        guard let section = FriendsController.sectionName.firstIndex(of: sender.selectedChar!) else {
             return
         }
         

@@ -36,7 +36,6 @@ class AllGroupsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Поиск групп"
