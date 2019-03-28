@@ -47,6 +47,8 @@ class FriendsController: UIViewController {
         
         title = "Мои Друзья"
         
+        navigationController?.delegate = self
+        
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Введите Имя или Фамилию"
@@ -91,23 +93,23 @@ class FriendsController: UIViewController {
         guard segue.identifier == "fotoCollectionSegue" else {
             return
         }
-        
+
         guard let indexPath = tableView.indexPathForSelectedRow else {
             return
         }
-        
+
         if isFiltering() {
             let friendFotoController = segue.destination as! FriendFotoController
             friendFotoController.friendData = Friends.filterFriendsArray[indexPath.row]
         } else {
-        
+
         let key = FriendsController.sectionName[indexPath.section]
         guard let friend = userFriendDictionary[key] else {
             return
         }
-        
+
         let friendFotoController = segue.destination as! FriendFotoController
-        
+
         friendFotoController.friendData = friend[indexPath.row]
         }
     }
@@ -116,7 +118,7 @@ class FriendsController: UIViewController {
 
 //MARK: - UITableViewDataSourse
 
-extension FriendsController : UITableViewDataSource {
+extension FriendsController : UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
@@ -179,5 +181,15 @@ extension FriendsController : UISearchResultsUpdating {
         filterContentForSearchText(searchController.searchBar.text!)
     }
     
+}
+
+extension FriendsController: UINavigationControllerDelegate {
+    
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        guard operation == .push else { return AnimatedTransitioningForPop() }
+        return AnimatedTransitioningForPush()
+        
+    }
     
 }

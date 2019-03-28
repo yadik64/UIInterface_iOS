@@ -23,6 +23,9 @@
 		101729DC2228371400331C81 /* LoginFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101729DB2228371400331C81 /* LoginFormViewController.swift */; };
 		1033A70322352A99004490FD /* IconAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1033A70222352A99004490FD /* IconAvatar.swift */; };
 		1033A7342235EDC3004490FD /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1033A7332235EDC3004490FD /* LikeButton.swift */; };
+		1038ACAE224CEE67007497CF /* AnimatedTransitioningForPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038ACAD224CEE67007497CF /* AnimatedTransitioningForPush.swift */; };
+		1038ACB0224CEEA3007497CF /* AnimatedTransitioningForPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038ACAF224CEEA3007497CF /* AnimatedTransitioningForPop.swift */; };
+		1038ACD0224D405D007497CF /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038ACCF224D405D007497CF /* AppUtility.swift */; };
 		103C0C9A22480E7800DEAF64 /* IndicatorCloudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103C0C9922480E7800DEAF64 /* IndicatorCloudView.swift */; };
 		103C0CA022481A4700DEAF64 /* ParallaxCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103C0C9F22481A4700DEAF64 /* ParallaxCollectionViewLayout.swift */; };
 		105B9C9D223E92D300996B5F /* CommentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105B9C9C223E92D300996B5F /* CommentButton.swift */; };
@@ -60,6 +63,9 @@
 		101729DB2228371400331C81 /* LoginFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormViewController.swift; sourceTree = "<group>"; };
 		1033A70222352A99004490FD /* IconAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconAvatar.swift; sourceTree = "<group>"; };
 		1033A7332235EDC3004490FD /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
+		1038ACAD224CEE67007497CF /* AnimatedTransitioningForPush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTransitioningForPush.swift; sourceTree = "<group>"; };
+		1038ACAF224CEEA3007497CF /* AnimatedTransitioningForPop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTransitioningForPop.swift; sourceTree = "<group>"; };
+		1038ACCF224D405D007497CF /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		103C0C9922480E7800DEAF64 /* IndicatorCloudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorCloudView.swift; sourceTree = "<group>"; };
 		103C0C9F22481A4700DEAF64 /* ParallaxCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxCollectionViewLayout.swift; sourceTree = "<group>"; };
 		105B9C9C223E92D300996B5F /* CommentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentButton.swift; sourceTree = "<group>"; };
@@ -149,6 +155,7 @@
 		101729C82228368800331C81 /* AuthorizationVK */ = {
 			isa = PBXGroup;
 			children = (
+				1038ACAC224CEE44007497CF /* Animation */,
 				105B9CA0223EC8CB00996B5F /* UI Elements */,
 				10122EB7223D9B95003A668E /* News */,
 				10AF46622231A56A004FD977 /* FotoCollectionFriend */,
@@ -157,6 +164,7 @@
 				10108839223057B4006FEDE2 /* UserGroups */,
 				1010882E22304513006FEDE2 /* Friends */,
 				101729DB2228371400331C81 /* LoginFormViewController.swift */,
+				1038ACCF224D405D007497CF /* AppUtility.swift */,
 				101729C92228368800331C81 /* AppDelegate.swift */,
 				101729CD2228368800331C81 /* Main.storyboard */,
 				101729D02228368A00331C81 /* Assets.xcassets */,
@@ -164,6 +172,15 @@
 				101729D52228368A00331C81 /* Info.plist */,
 			);
 			path = AuthorizationVK;
+			sourceTree = "<group>";
+		};
+		1038ACAC224CEE44007497CF /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				1038ACAD224CEE67007497CF /* AnimatedTransitioningForPush.swift */,
+				1038ACAF224CEEA3007497CF /* AnimatedTransitioningForPop.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		105B9CA0223EC8CB00996B5F /* UI Elements */ = {
@@ -278,6 +295,7 @@
 			files = (
 				1033A70322352A99004490FD /* IconAvatar.swift in Sources */,
 				10AF465A22315331004FD977 /* Group.swift in Sources */,
+				1038ACD0224D405D007497CF /* AppUtility.swift in Sources */,
 				10AF46642231A59A004FD977 /* FriendFotoController.swift in Sources */,
 				10AF466022318C0D004FD977 /* FriendsController.swift in Sources */,
 				103C0C9A22480E7800DEAF64 /* IndicatorCloudView.swift in Sources */,
@@ -295,11 +313,13 @@
 				1006189722310DF50094A08C /* UserGroupsCell.swift in Sources */,
 				105B9C9D223E92D300996B5F /* CommentButton.swift in Sources */,
 				10122EC3223D9E7B003A668E /* NewsCell.swift in Sources */,
+				1038ACB0224CEEA3007497CF /* AnimatedTransitioningForPop.swift in Sources */,
 				10108848223073CB006FEDE2 /* AllGroupsController.swift in Sources */,
 				10122EB9223D9BBF003A668E /* NewsController.swift in Sources */,
 				10122EBF223D9C12003A668E /* NewsTableHeader.swift in Sources */,
 				1010883B223057E7006FEDE2 /* UserGroupsController.swift in Sources */,
 				10C5204C223103D800B6F67B /* AllGroupsCell.swift in Sources */,
+				1038ACAE224CEE67007497CF /* AnimatedTransitioningForPush.swift in Sources */,
 				10B2A64F2243BD100011A36E /* LikeView.swift in Sources */,
 				10AF46662231A5BB004FD977 /* FriendFotoCell.swift in Sources */,
 				10EA00F6223B9B6F008AE2EE /* AMTitledTextField.swift in Sources */,

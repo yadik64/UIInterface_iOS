@@ -23,6 +23,8 @@ class UserGroupsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.delegate = self
 
     }
     
@@ -64,7 +66,6 @@ class UserGroupsController: UIViewController {
         let allGroupsController = segue.destination as! AllGroupsController
         
         allGroupsController.dispayedGroupsArray = Array(Set(allGroupsController.allGroupsArray).subtracting(userGroupsArray))
-        
         
     }
 
@@ -113,4 +114,14 @@ extension NSObject {
     static func className() -> String {
         return String(describing: self)
     }
+}
+
+extension UserGroupsController: UINavigationControllerDelegate {
+    
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        guard operation == .push else { return AnimatedTransitioningForPop() }
+        return AnimatedTransitioningForPush()
+    }
+        
 }
