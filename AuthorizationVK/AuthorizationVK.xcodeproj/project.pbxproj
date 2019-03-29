@@ -42,6 +42,7 @@
 		10C5204C223103D800B6F67B /* AllGroupsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5204B223103D800B6F67B /* AllGroupsCell.swift */; };
 		10EA00F6223B9B6F008AE2EE /* AMTitledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EA00F5223B9B6F008AE2EE /* AMTitledTextField.swift */; };
 		10F675E8223EF811007640C8 /* FriendFotoCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F675E7223EF811007640C8 /* FriendFotoCollectionViewLayout.swift */; };
+		10FB61D9224E9DE700FFB3BD /* CustomInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FB61D8224E9DE700FFB3BD /* CustomInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		10C5204B223103D800B6F67B /* AllGroupsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsCell.swift; sourceTree = "<group>"; };
 		10EA00F5223B9B6F008AE2EE /* AMTitledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMTitledTextField.swift; sourceTree = "<group>"; };
 		10F675E7223EF811007640C8 /* FriendFotoCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFotoCollectionViewLayout.swift; sourceTree = "<group>"; };
+		10FB61D8224E9DE700FFB3BD /* CustomInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 		1038ACAC224CEE44007497CF /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				10FB61D8224E9DE700FFB3BD /* CustomInteractor.swift */,
 				1038ACAD224CEE67007497CF /* AnimatedTransitioningForPush.swift */,
 				1038ACAF224CEEA3007497CF /* AnimatedTransitioningForPop.swift */,
 			);
@@ -306,6 +309,7 @@
 				103C0CA022481A4700DEAF64 /* ParallaxCollectionViewLayout.swift in Sources */,
 				1033A7342235EDC3004490FD /* LikeButton.swift in Sources */,
 				10122ECB223DB415003A668E /* NewsTableFooter.swift in Sources */,
+				10FB61D9224E9DE700FFB3BD /* CustomInteractor.swift in Sources */,
 				101729CA2228368800331C81 /* AppDelegate.swift in Sources */,
 				10F675E8223EF811007640C8 /* FriendFotoCollectionViewLayout.swift in Sources */,
 				10B2A6492243A0810011A36E /* LoadingIndicator.swift in Sources */,

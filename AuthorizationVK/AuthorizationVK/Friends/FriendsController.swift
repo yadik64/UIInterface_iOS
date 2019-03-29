@@ -13,6 +13,7 @@ class FriendsController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     let searchController = UISearchController(searchResultsController: nil)
     
+    private var customInteractor : CustomInteractor?
     private var userFriendDictionary = [String: [Friends]]()
     static var sectionName: [String] {
         get {
@@ -187,8 +188,12 @@ extension FriendsController: UINavigationControllerDelegate {
     
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        guard operation == .push else { return AnimatedTransitioningForPop() }
-        return AnimatedTransitioningForPush()
+        switch operation {
+        case .push:
+            return AnimatedTransitioningForPush()
+        default:
+            return AnimatedTransitioningForPop()
+        }
         
     }
     

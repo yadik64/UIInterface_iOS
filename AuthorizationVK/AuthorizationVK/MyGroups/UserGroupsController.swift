@@ -21,6 +21,8 @@ class UserGroupsController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    private var customInteractor: CustomInteractor?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -118,10 +120,20 @@ extension NSObject {
 
 extension UserGroupsController: UINavigationControllerDelegate {
     
+    func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        guard let ci = customInteractor else { return nil }
+        return ci.transitionInProgress ? customInteractor : nil
+    }
+    
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        guard operation == .push else { return AnimatedTransitioningForPop() }
-        return AnimatedTransitioningForPush()
+        switch operation {
+        case .push:
+            self.customInteractor = CustomInteractor(attachTo: toVC)
+            return AnimatedTransitioningForPush()
+        default:
+            return AnimatedTransitioningForPop()
+        }
     }
         
 }
