@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NewsTableFooter" customModule="AuthorizationVK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="25"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="OdS-yE-gw3">
+                    <rect key="frame" x="10" y="0.0" width="60" height="25"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAX-WR-utV" customClass="LikeButton" customModule="AuthorizationVK" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="KDt-db-shx"/>
+                                <constraint firstAttribute="width" constant="25" id="lr1-3E-7a8"/>
+                            </constraints>
+                            <connections>
+                                <action selector="pressLikeButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="qie-19-txV"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="56" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vP8-pV-7MT">
+                            <rect key="frame" x="27" y="0.0" width="33" height="25"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="bYh-DR-I9t"/>
+                        <constraint firstAttribute="height" constant="25" id="cDF-Rr-8t7"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDC-MT-7lT" customClass="CommentButton" customModule="AuthorizationVK" customModuleProvider="target">
+                    <rect key="frame" x="80" y="1" width="30" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="23" id="KoP-cc-WPf"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="23" id="nL6-PJ-99f"/>
+                    </constraints>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Amh-dl-IJ7">
+                    <rect key="frame" x="130" y="1" width="33" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="1N9-RT-bz2"/>
+                    </constraints>
+                    <state key="normal" image="repost1"/>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="gw9-An-ZHv">
+                    <rect key="frame" x="307" y="0.0" width="58" height="25"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlx-Ni-VM5" customClass="Viewed" customModule="AuthorizationVK" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="e8Y-ey-7i8"/>
+                                <constraint firstAttribute="width" constant="25" id="zrS-BW-SlF"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hq7-lC-YWc">
+                            <rect key="frame" x="27" y="0.0" width="31" height="25"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="hlx-Ni-VM5" firstAttribute="leading" secondItem="gw9-An-ZHv" secondAttribute="leading" id="Hzs-JD-4Ic"/>
+                        <constraint firstItem="hlx-Ni-VM5" firstAttribute="top" secondItem="gw9-An-ZHv" secondAttribute="top" id="aGk-Yc-ijc"/>
+                        <constraint firstAttribute="bottom" secondItem="hlx-Ni-VM5" secondAttribute="bottom" id="rS8-RP-bew"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gw9-An-ZHv" secondAttribute="trailing" constant="10" id="BLc-Mg-zkU"/>
+                <constraint firstItem="gw9-An-ZHv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Ema-5N-MjA"/>
+                <constraint firstItem="hDC-MT-7lT" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="1" id="J4G-A6-hDg"/>
+                <constraint firstAttribute="bottom" secondItem="Amh-dl-IJ7" secondAttribute="bottom" constant="1" id="JUm-ET-a8l"/>
+                <constraint firstItem="OdS-yE-gw3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="Lia-Z4-Izd"/>
+                <constraint firstItem="gw9-An-ZHv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="M0y-Hc-zvX"/>
+                <constraint firstItem="gw9-An-ZHv" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="YIQ-Bt-YH9"/>
+                <constraint firstItem="hDC-MT-7lT" firstAttribute="leading" secondItem="OdS-yE-gw3" secondAttribute="trailing" constant="10" id="gHV-nH-TaE"/>
+                <constraint firstItem="Amh-dl-IJ7" firstAttribute="leading" secondItem="hDC-MT-7lT" secondAttribute="trailing" constant="20" id="m7X-gp-HlG"/>
+                <constraint firstAttribute="bottom" secondItem="hDC-MT-7lT" secondAttribute="bottom" id="nQ6-5y-Bng"/>
+                <constraint firstItem="Amh-dl-IJ7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="1" id="ozb-ec-DXg"/>
+                <constraint firstItem="gw9-An-ZHv" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="pbz-Ip-RFS"/>
+                <constraint firstAttribute="bottom" secondItem="OdS-yE-gw3" secondAttribute="bottom" id="t57-R2-eMD"/>
+                <constraint firstItem="OdS-yE-gw3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="vhq-UW-Zt6"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="likeButton" destination="sAX-WR-utV" id="Xig-rL-KBC"/>
+                <outlet property="likeLabel" destination="vP8-pV-7MT" id="b7E-mY-NCE"/>
+                <outlet property="viewedCount" destination="hq7-lC-YWc" id="SQD-jq-PJk"/>
+            </connections>
+            <point key="canvasLocation" x="39.200000000000003" y="335.08245877061472"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="repost1" width="33" height="23"/>
+    </resources>
+</document>
